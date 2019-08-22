@@ -859,10 +859,8 @@ F 3 "" H 18950 -5350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	18950 -5350 18900 -5350
-Text GLabel 24975 -4325 2    50   Output ~ 0
-RGB_DIN
-Wire Wire Line
-	24975 -4325 24950 -4325
+Text GLabel 25025 -4325 2    50   Input ~ 0
+Col16
 $Comp
 L power:GND #PWR0104
 U 1 1 5E6FD7D4
@@ -14062,4 +14060,38 @@ Text GLabel 21675 -3325 0    50   Input ~ 0
 Col14
 Wire Wire Line
 	21675 -3325 21750 -3325
+Text GLabel 25025 -3825 2    50   Input ~ 0
+Col18
+Wire Wire Line
+	25025 -3825 24950 -3825
+Text GLabel 25025 -4075 2    50   Input ~ 0
+Col17
+Wire Wire Line
+	25025 -4075 24950 -4075
+Text GLabel 24100 -6250 1    50   Input ~ 0
+Col7
+Wire Wire Line
+	24100 -6250 24100 -6175
+Text GLabel 23850 -6250 1    50   Input ~ 0
+Col5
+Wire Wire Line
+	23850 -6250 23850 -6175
+Text GLabel 23600 -6250 1    50   Input ~ 0
+Col3
+Wire Wire Line
+	23600 -6250 23600 -6175
+Text GLabel 23350 -6250 1    50   Input ~ 0
+Col2
+Wire Wire Line
+	23350 -6250 23350 -6175
+Text GLabel 23100 -6250 1    50   Input ~ 0
+Col1
+Wire Wire Line
+	23100 -6250 23100 -6175
+Wire Wire Line
+	24950 -4325 25025 -4325
+Text GLabel 25025 -4575 2    50   Output ~ 0
+RGB_DIN
+Wire Wire Line
+	24950 -4575 25025 -4575
 $EndSCHEMATC
