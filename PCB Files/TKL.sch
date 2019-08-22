@@ -3197,8 +3197,6 @@ Wire Wire Line
 Wire Wire Line
 	9425 6425 9425 7675
 Wire Wire Line
-	8400 6425 8400 7675
-Wire Wire Line
 	7400 6425 7400 7675
 $Comp
 L Device:D D66
@@ -3710,19 +3708,6 @@ F 3 "" H 1925 9700 50  0001 C CNN
 	1    1925 9700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7575 9700 7400 9700
-$Comp
-L acheronSymbols:MXSwitch SW95
-U 1 1 63D90E4B
-P 7925 9700
-F 0 "SW95" H 7925 9775 30  0000 C CNN
-F 1 "SPACE_B2" H 7925 9725 30  0000 C CNN
-F 2 "acheron_MX:MX700R" H 7925 9700 50  0001 C CNN
-F 3 "" H 7925 9700 50  0001 C CNN
-	1    7925 9700
-	1    0    0    -1  
-$EndComp
 $Comp
 L acheronSymbols:MXSwitch SW92
 U 1 1 63D90E58
@@ -3837,23 +3822,22 @@ Wire Wire Line
 $Comp
 L acheronSymbols:MXSwitch SW96
 U 1 1 65BBE9E8
-P 7925 10475
-F 0 "SW96" H 7925 10550 30  0000 C CNN
-F 1 "RSPC_B3" H 7925 10500 30  0000 C CNN
-F 2 "acheron_MX:MX275R" H 7925 10475 50  0001 C CNN
-F 3 "" H 7925 10475 50  0001 C CNN
-	1    7925 10475
+P 8925 10475
+F 0 "SW96" H 8925 10550 30  0000 C CNN
+F 1 "RSPC_B3" H 8925 10500 30  0000 C CNN
+F 2 "acheron_MX:MX275R" H 8925 10475 50  0001 C CNN
+F 3 "" H 8925 10475 50  0001 C CNN
+	1    8925 10475
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7575 10475 7400 10475
+	8575 10475 8400 10475
 Wire Wire Line
 	1400 7675 1400 8925
 Connection ~ 1400 7675
 Connection ~ 3400 9700
 Wire Wire Line
 	3400 9700 3575 9700
-Connection ~ 7400 9700
 Wire Wire Line
 	10600 10475 10425 10475
 $Comp
@@ -3934,9 +3918,7 @@ Text GLabel 2925 10125 2    50   BiDi ~ 0
 L2
 Text GLabel 3925 10125 2    50   BiDi ~ 0
 L3
-Text GLabel 7925 9350 2    50   BiDi ~ 0
-L4
-Text GLabel 7925 10125 2    50   BiDi ~ 0
+Text GLabel 8925 10125 2    50   BiDi ~ 0
 L4
 Text GLabel 10950 10125 2    50   BiDi ~ 0
 L5
@@ -3956,8 +3938,6 @@ Wire Wire Line
 	5925 9825 5925 8175
 Wire Wire Line
 	3400 9700 3400 10475
-Wire Wire Line
-	7400 9700 7400 10475
 Wire Wire Line
 	10425 8925 10425 10475
 Wire Wire Line
@@ -3988,9 +3968,6 @@ Wire Wire Line
 	2400 9700 2400 10475
 Wire Wire Line
 	7400 7675 7400 8925
-Wire Wire Line
-	7400 8925 7400 9700
-Connection ~ 7400 8925
 Wire Wire Line
 	15425 5175 15425 6425
 Wire Wire Line
@@ -14090,8 +14067,47 @@ Wire Wire Line
 	23100 -6250 23100 -6175
 Wire Wire Line
 	24950 -4325 25025 -4325
-Text GLabel 25025 -4575 2    50   Output ~ 0
-RGB_DIN
+Text GLabel 25025 -4575 2    50   Input ~ 0
+Col4
 Wire Wire Line
 	24950 -4575 25025 -4575
+Wire Wire Line
+	8400 6425 8400 7675
+Connection ~ 7400 8925
+Wire Wire Line
+	7400 8925 7400 9700
+Text GLabel 7925 9350 2    50   BiDi ~ 0
+L4
+$Comp
+L acheronSymbols:MXSwitch SW95
+U 1 1 63D90E4B
+P 7925 9700
+F 0 "SW95" H 7925 9775 30  0000 C CNN
+F 1 "SPACE_B2" H 7925 9725 30  0000 C CNN
+F 2 "acheron_MX:MX700R" H 7925 9700 50  0001 C CNN
+F 3 "" H 7925 9700 50  0001 C CNN
+	1    7925 9700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7575 9700 7400 9700
+Wire Wire Line
+	8400 7675 8400 10475
+Connection ~ 8400 7675
+Text GLabel 25025 -4825 2    50   Input ~ 0
+Col6
+Wire Wire Line
+	24950 -4825 25025 -4825
+Text GLabel 25025 -5075 2    50   Input ~ 0
+Col10
+Wire Wire Line
+	24950 -5075 25025 -5075
+Text GLabel 25025 -5325 2    50   Input ~ 0
+Col11
+Wire Wire Line
+	24950 -5325 25025 -5325
+Text GLabel 25025 -5575 2    50   Input ~ 0
+Col13
+Wire Wire Line
+	24950 -5575 25025 -5575
 $EndSCHEMATC
