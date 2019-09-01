@@ -3177,8 +3177,6 @@ Wire Wire Line
 Wire Wire Line
 	3800 6750 3800 8000
 Wire Wire Line
-	4800 6750 4800 8000
-Wire Wire Line
 	6800 6750 6800 8000
 Wire Wire Line
 	9825 6750 9825 8000
@@ -3758,16 +3756,14 @@ Wire Wire Line
 $Comp
 L acheronSymbols:MXSwitch SW91
 U 1 1 64C0FB34
-P 3325 10800
-F 0 "SW91" H 3325 10875 30  0000 C CNN
-F 1 "LALT_B3" H 3325 10825 30  0000 C CNN
-F 2 "acheron_MX:MX100" H 3325 10800 50  0001 C CNN
-F 3 "" H 3325 10800 50  0001 C CNN
-	1    3325 10800
+P 4325 10800
+F 0 "SW91" H 4325 10875 30  0000 C CNN
+F 1 "LALT_B3" H 4325 10825 30  0000 C CNN
+F 2 "acheron_MX:MX100" H 4325 10800 50  0001 C CNN
+F 3 "" H 4325 10800 50  0001 C CNN
+	1    4325 10800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2975 10800 2800 10800
 Wire Wire Line
 	5975 10800 5800 10800
 $Comp
@@ -3793,19 +3789,6 @@ F 3 "" H 6325 10800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L acheronSymbols:MXSwitch SW93
-U 1 1 64C0FB4F
-P 4325 10800
-F 0 "SW93" H 4325 10875 30  0000 C CNN
-F 1 "LGUI_B3" H 4325 10825 30  0000 C CNN
-F 2 "acheron_MX:MX125" H 4325 10800 50  0001 C CNN
-F 3 "" H 4325 10800 50  0001 C CNN
-	1    4325 10800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3975 10800 3800 10800
-$Comp
 L acheronSymbols:MXSwitch SW96
 U 1 1 65BBE9E8
 P 9325 10800
@@ -3821,7 +3804,6 @@ Wire Wire Line
 Wire Wire Line
 	1800 8000 1800 9250
 Connection ~ 1800 8000
-Connection ~ 3800 10025
 Wire Wire Line
 	3800 10025 3975 10025
 Wire Wire Line
@@ -3900,8 +3882,6 @@ Text GLabel 3325 9675 2    50   BiDi ~ 0
 L2
 Text GLabel 4325 9675 2    50   BiDi ~ 0
 L3
-Text GLabel 3325 10450 2    50   BiDi ~ 0
-L2
 Text GLabel 4325 10450 2    50   BiDi ~ 0
 L3
 Text GLabel 9325 10450 2    50   BiDi ~ 0
@@ -3922,8 +3902,6 @@ Wire Wire Line
 	13825 9250 13825 10025
 Wire Wire Line
 	6325 10150 6325 8500
-Wire Wire Line
-	3800 10025 3800 10800
 Wire Wire Line
 	10825 9250 10825 10800
 Wire Wire Line
@@ -3949,9 +3927,6 @@ Wire Wire Line
 	2800 9250 2800 10025
 Wire Wire Line
 	2975 10025 2800 10025
-Connection ~ 2800 10025
-Wire Wire Line
-	2800 10025 2800 10800
 Wire Wire Line
 	7800 8000 7800 9250
 Wire Wire Line
@@ -14201,4 +14176,29 @@ Wire Notes Line
 	23750 8500 24375 8500
 Wire Notes Line
 	24375 8500 24375 8250
+Wire Wire Line
+	4800 6750 4800 8000
+Connection ~ 3800 10025
+Wire Wire Line
+	3800 10025 3800 10800
+Text GLabel 5325 8875 2    50   BiDi ~ 0
+L3
+Wire Wire Line
+	3975 10800 3800 10800
+$Comp
+L acheronSymbols:MXSwitch SW93
+U 1 1 64C0FB4F
+P 5325 9225
+F 0 "SW93" H 5325 9300 30  0000 C CNN
+F 1 "LGUI_B3" H 5325 9250 30  0000 C CNN
+F 2 "acheron_MX:MX125" H 5325 9225 50  0001 C CNN
+F 3 "" H 5325 9225 50  0001 C CNN
+	1    5325 9225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 8000 4800 9225
+Wire Wire Line
+	4800 9225 4975 9225
+Connection ~ 4800 8000
 $EndSCHEMATC
