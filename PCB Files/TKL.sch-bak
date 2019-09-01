@@ -955,23 +955,23 @@ Wire Wire Line
 $Comp
 L Mechanical:MountingHole G1
 U 1 1 5D47814B
-P 24025 9275
-F 0 "G1" H 24125 9321 50  0000 L CNN
-F 1 "TKL Logo" H 24125 9230 50  0000 L CNN
-F 2 "TKL_graphics:TKL_Logo_11x18mm_Plated" H 24025 9275 50  0001 C CNN
-F 3 "~" H 24025 9275 50  0001 C CNN
-	1    24025 9275
+P 24300 8925
+F 0 "G1" H 24400 8971 50  0000 L CNN
+F 1 "TKL Logo" H 24400 8880 50  0000 L CNN
+F 2 "TKL_graphics:TKL_Logo_11x18mm_Plated" H 24300 8925 50  0001 C CNN
+F 3 "~" H 24300 8925 50  0001 C CNN
+	1    24300 8925
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole G2
 U 1 1 5D4788D8
-P 24025 9525
-F 0 "G2" H 24125 9571 50  0000 L CNN
-F 1 "Acheron Short Logo Plated" H 24125 9480 50  0000 L CNN
-F 2 "acheron_Logos:acheronShort_15.2x21mm_Plated" H 24025 9525 50  0001 C CNN
-F 3 "~" H 24025 9525 50  0001 C CNN
-	1    24025 9525
+P 24300 9175
+F 0 "G2" H 24400 9221 50  0000 L CNN
+F 1 "Acheron Short Logo Plated" H 24400 9130 50  0000 L CNN
+F 2 "acheron_Logos:acheronShort_15.2x21mm_Plated" H 24300 9175 50  0001 C CNN
+F 3 "~" H 24300 9175 50  0001 C CNN
+	1    24300 9175
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -10428,12 +10428,12 @@ Wire Wire Line
 $Comp
 L Mechanical:MountingHole G3
 U 1 1 5DD82501
-P 24025 9775
-F 0 "G3" H 24125 9821 50  0000 L CNN
-F 1 "Warning sign" H 24125 9730 50  0000 L CNN
-F 2 "acheron_Graphics:warning_sign_3.6x3.2mm" H 24025 9775 50  0001 C CNN
-F 3 "~" H 24025 9775 50  0001 C CNN
-	1    24025 9775
+P 24300 9425
+F 0 "G3" H 24400 9471 50  0000 L CNN
+F 1 "Warning sign" H 24400 9380 50  0000 L CNN
+F 2 "acheron_Graphics:warning_sign_3.6x3.2mm" H 24300 9425 50  0001 C CNN
+F 3 "~" H 24300 9425 50  0001 C CNN
+	1    24300 9425
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
