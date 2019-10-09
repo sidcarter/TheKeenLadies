@@ -6,8 +6,8 @@ $Descr User 50000 25000
 encoding utf-8
 Sheet 1 1
 Title "TheKeenLadiesPCB"
-Date "2019-09-01"
-Rev "V0.0.1"
+Date "2019-10-08"
+Rev "pre-Alpha"
 Comp "Designed by Gondolindrim"
 Comment1 ""
 Comment2 ""
@@ -608,7 +608,7 @@ U 1 1 5D2994BF
 P 33775 4975
 F 0 "X1" H 33475 4950 30  0000 L CNN
 F 1 "16MHz" H 33450 5000 30  0000 L CNN
-F 2 "Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm" H 33775 4975 50  0001 C CNN
+F 2 "acheron_Components:Crystal_SMD_2016-4Pin_2.0x1.6mm" H 33775 4975 50  0001 C CNN
 F 3 "~" H 33775 4975 50  0001 C CNN
 	1    33775 4975
 	-1   0    0    1   
@@ -955,23 +955,23 @@ Wire Wire Line
 $Comp
 L Mechanical:MountingHole G1
 U 1 1 5D47814B
-P 24300 8925
-F 0 "G1" H 24400 8971 50  0000 L CNN
-F 1 "TKL Logo" H 24400 8880 50  0000 L CNN
-F 2 "TKL_graphics:TKL_Logo_11x18mm_Plated" H 24300 8925 50  0001 C CNN
-F 3 "~" H 24300 8925 50  0001 C CNN
-	1    24300 8925
+P 21550 6175
+F 0 "G1" H 21650 6221 50  0000 L CNN
+F 1 "TKL Logo" H 21650 6130 50  0000 L CNN
+F 2 "TKL_graphics:TKL_Logo_11x18mm_Plated" H 21550 6175 50  0001 C CNN
+F 3 "~" H 21550 6175 50  0001 C CNN
+	1    21550 6175
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole G2
 U 1 1 5D4788D8
-P 24300 9175
-F 0 "G2" H 24400 9221 50  0000 L CNN
-F 1 "Acheron Short Logo Plated" H 24400 9130 50  0000 L CNN
-F 2 "acheron_Logos:acheronShort_15.2x21mm_Plated" H 24300 9175 50  0001 C CNN
-F 3 "~" H 24300 9175 50  0001 C CNN
-	1    24300 9175
+P 21550 6425
+F 0 "G2" H 21650 6471 50  0000 L CNN
+F 1 "Acheron Short Logo Plated" H 21650 6380 50  0000 L CNN
+F 2 "acheron_Logos:acheronShort_15.2x21mm_Plated" H 21550 6425 50  0001 C CNN
+F 3 "~" H 21550 6425 50  0001 C CNN
+	1    21550 6425
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -3746,8 +3746,6 @@ Wire Wire Line
 Connection ~ 11825 8000
 Wire Wire Line
 	11825 9250 12000 9250
-Wire Wire Line
-	4325 8500 5325 8500
 Wire Wire Line
 	2325 8900 2425 8900
 Connection ~ 2325 8900
@@ -10292,12 +10290,12 @@ Wire Wire Line
 $Comp
 L Mechanical:MountingHole G3
 U 1 1 5DD82501
-P 24300 9425
-F 0 "G3" H 24400 9471 50  0000 L CNN
-F 1 "Warning sign" H 24400 9380 50  0000 L CNN
-F 2 "acheron_Graphics:warning_sign_3.6x3.2mm" H 24300 9425 50  0001 C CNN
-F 3 "~" H 24300 9425 50  0001 C CNN
-	1    24300 9425
+P 21550 6675
+F 0 "G3" H 21650 6721 50  0000 L CNN
+F 1 "Warning sign" H 21650 6630 50  0000 L CNN
+F 2 "acheron_Graphics:warning_sign_3.6x3.2mm" H 21550 6675 50  0001 C CNN
+F 3 "~" H 21550 6675 50  0001 C CNN
+	1    21550 6675
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -13735,11 +13733,11 @@ Row1
 Wire Wire Line
 	32650 4675 32650 4725
 Wire Wire Line
-	32225 4075 32300 4075
+	32225 4075 32275 4075
 Text GLabel 32225 4075 0    50   Input ~ 0
 Row2
 Wire Wire Line
-	32225 3825 32300 3825
+	32225 3825 32275 3825
 Text GLabel 32225 3825 0    50   Input ~ 0
 Row3
 Text GLabel 32225 3575 0    50   Input ~ 0
@@ -13749,7 +13747,7 @@ Wire Wire Line
 Text GLabel 32225 4325 0    50   Input ~ 0
 Col14
 Wire Wire Line
-	32225 4325 32300 4325
+	32225 4325 32275 4325
 Text GLabel 35575 3825 2    50   Input ~ 0
 Col16
 Wire Wire Line
@@ -13837,31 +13835,31 @@ Connection ~ 16825 5500
 Connection ~ 18800 5500
 Text Notes 775  1125 0    200  ~ 40
 Switch matrix
-Wire Notes Line
+Wire Notes Line width 20
 	24725 750  24725 5250
-Wire Notes Line
+Wire Notes Line width 20
 	24725 5250 21000 5250
-Wire Notes Line
+Wire Notes Line width 20
 	21000 5250 21000 750 
-Wire Notes Line
+Wire Notes Line width 20
 	21000 750  24725 750 
 Text Notes 21050 950  0    100  ~ 20
 USB Connector
-Wire Notes Line
+Wire Notes Line width 20
 	21025 1000 22275 1000
 Wire Notes Line
 	22275 1000 22275 750 
-Wire Notes Line
+Wire Notes Line width 20
 	29350 750  29350 3625
-Wire Notes Line
+Wire Notes Line width 20
 	29350 3625 25225 3625
-Wire Notes Line
+Wire Notes Line width 20
 	25225 3625 25225 750 
 Text Notes 25250 925  0    100  ~ 20
 USB ESD Protection
-Wire Notes Line
+Wire Notes Line width 20
 	25225 750  29350 750 
-Wire Notes Line
+Wire Notes Line width 20
 	25225 950  26800 950 
 Wire Notes Line
 	26800 950  26800 750 
@@ -13875,25 +13873,25 @@ Connection ~ 30675 2650
 Wire Wire Line
 	30675 2650 30675 2700
 Text GLabel 31125 2650 2    50   Output ~ 0
-RST
+~RST
 Wire Wire Line
 	31125 2650 31025 2650
 Connection ~ 31025 2650
 Text GLabel 32900 4675 3    50   Input ~ 0
-RST
-Wire Notes Line
+~RST
+Wire Notes Line width 20
 	30000 750  39500 750 
-Wire Notes Line
+Wire Notes Line width 20
 	39500 750  39500 5800
-Wire Notes Line
+Wire Notes Line width 20
 	39500 5800 30000 5800
-Wire Notes Line
+Wire Notes Line width 20
 	30000 5800 30000 750 
 Text Notes 30050 950  0    100  ~ 20
 MCU Shenanigans
-Wire Notes Line
+Wire Notes Line width 20
 	30000 1000 31500 1000
-Wire Notes Line
+Wire Notes Line width 20
 	31500 1000 31500 750 
 Wire Notes Line width 20
 	700  1250 3000 1250
@@ -13913,38 +13911,22 @@ Wire Notes Line width 20
 	750  12250 2625 12250
 Wire Notes Line width 20
 	2625 12250 2625 11750
-Wire Notes Line
-	23750 8250 25750 8250
-Wire Notes Line
-	25750 8250 25750 10025
-Wire Notes Line
-	25750 10025 23750 10025
-Wire Notes Line
-	23750 10025 23750 8250
-Text Notes 23800 8450 0    100  ~ 20
+Wire Notes Line width 20
+	21000 5500 23000 5500
+Wire Notes Line width 20
+	23000 5500 23000 7275
+Wire Notes Line width 20
+	23000 7275 21000 7275
+Wire Notes Line width 20
+	21000 7275 21000 5500
+Text Notes 21050 5700 0    100  ~ 20
 LOGOS
-Wire Notes Line
-	23750 8500 24375 8500
-Wire Notes Line
-	24375 8500 24375 8250
+Wire Notes Line width 20
+	21000 5750 21625 5750
+Wire Notes Line width 20
+	21625 5750 21625 5500
 Wire Wire Line
 	4800 6750 4800 8000
-$Comp
-L acheronSymbols:MXSwitch SW93
-U 1 1 64C0FB4F
-P 5325 9225
-F 0 "SW93" H 5325 9300 30  0000 C CNN
-F 1 "LGUI_B3" H 5325 9250 30  0000 C CNN
-F 2 "acheron_MX:MX125" H 5325 9225 50  0001 C CNN
-F 3 "" H 5325 9225 50  0001 C CNN
-	1    5325 9225
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 8000 4800 9225
-Wire Wire Line
-	4800 9225 4975 9225
-Connection ~ 4800 8000
 Text GLabel 35150 4750 3    50   Input ~ 0
 Col17
 Wire Wire Line
@@ -14090,22 +14072,6 @@ F 3 "~" H 9325 5000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9975 8000 9825 8000
-$Comp
-L Device:D D93
-U 1 1 798FF32B
-P 5325 8700
-F 0 "D93" V 5300 8625 30  0000 R CNN
-F 1 "1N4148" V 5350 8625 30  0000 R CNN
-F 2 "acheron_Components:D_SOD-123" H 5325 8700 50  0001 C CNN
-F 3 "~" H 5325 8700 50  0001 C CNN
-	1    5325 8700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5325 8875 5325 8850
-Wire Wire Line
-	5325 8550 5325 8500
-Connection ~ 5325 8500
 $Comp
 L Device:R_Small RD88
 U 1 1 7A59790E
@@ -14437,10 +14403,6 @@ Wire Wire Line
 	16300 21325 16425 21325
 Wire Wire Line
 	16300 21325 16300 20375
-Wire Wire Line
-	18575 21425 19175 21425
-Wire Wire Line
-	18575 20375 18575 21425
 $Comp
 L Device:R_Small RD81
 U 1 1 7A5979C4
@@ -15303,8 +15265,6 @@ Wire Wire Line
 Wire Wire Line
 	21275 20375 23550 20375
 Wire Wire Line
-	16300 20375 18575 20375
-Wire Wire Line
 	11300 20375 13575 20375
 $Comp
 L Device:R_Small RD79
@@ -15439,19 +15399,6 @@ Wire Wire Line
 	36050 20325 36050 21375
 Wire Wire Line
 	36050 21375 36650 21375
-$Comp
-L Device:LED_BGRA L93
-U 1 1 81EBBF4F
-P 20225 21425
-F 0 "L93" H 20225 21922 50  0000 C CNN
-F 1 "LED_BGRA" H 20225 21831 50  0000 C CNN
-F 2 "acheron_Components:LED_RGB_SMD_6028_2.8x3.5mm_Round" H 20225 21375 50  0001 C CNN
-F 3 "~" H 20225 21375 50  0001 C CNN
-	1    20225 21425
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5325 8500 8325 8500
 Wire Wire Line
 	8325 8500 11350 8500
 Wire Wire Line
@@ -15584,115 +15531,105 @@ F 3 "~" H 25200 21375 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	28550 21375 29150 21375
-$Comp
-L Device:R_Small RD93
-U 1 1 616E611D
-P 19025 21325
-F 0 "RD93" V 18876 21325 30  0000 C CNN
-F 1 "33R" V 18936 21325 30  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 19025 21325 50  0001 C CNN
-F 3 "~" H 19025 21325 50  0001 C CNN
-	1    19025 21325
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	19575 21775 19575 21725
-$Comp
-L power:GND #PWR0187
-U 1 1 616E6124
-P 19575 21775
-F 0 "#PWR0187" H 19575 21525 50  0001 C CNN
-F 1 "GND" H 19575 21650 20  0000 C CNN
-F 2 "" H 19575 21775 50  0001 C CNN
-F 3 "" H 19575 21775 50  0001 C CNN
-	1    19575 21775
-	1    0    0    -1  
-$EndComp
-Text GLabel 19575 20700 1    50   Input ~ 0
-5V
-Wire Wire Line
-	20475 21425 20425 21425
-Text GLabel 20475 21425 2    50   Input ~ 0
-5V
-Wire Wire Line
-	20025 21425 19975 21425
-Wire Wire Line
-	20000 21625 20025 21625
-Wire Wire Line
-	20000 21525 20000 21625
-Wire Wire Line
-	19975 21525 20000 21525
-Wire Wire Line
-	20000 21325 19975 21325
-Wire Wire Line
-	20000 21225 20000 21325
-Wire Wire Line
-	20025 21225 20000 21225
-$Comp
-L acheronSymbols:WS2811M U93
-U 1 1 616E6134
-P 19575 21425
-F 0 "U93" H 19275 21150 50  0000 C CNN
-F 1 "WS2811M" H 19275 21075 50  0000 C CNN
-F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 19275 21575 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 19375 21675 50  0001 C CNN
-	1    19575 21425
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R93
-U 1 1 616E6140
-P 19575 20875
-F 0 "R93" H 19634 20905 30  0000 L CNN
-F 1 "100R" H 19634 20845 30  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 19575 20875 50  0001 C CNN
-F 3 "~" H 19575 20875 50  0001 C CNN
-	1    19575 20875
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C93
-U 1 1 616E6146
-P 19375 21050
-F 0 "C93" V 19193 21050 30  0000 C CNN
-F 1 "100nF" V 19253 21050 30  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 19375 21050 50  0001 C CNN
-F 3 "~" H 19375 21050 50  0001 C CNN
-	1    19375 21050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	19575 21050 19475 21050
-Wire Wire Line
-	19275 21050 19175 21050
-Wire Wire Line
-	19575 20700 19575 20775
-Wire Wire Line
-	19575 20975 19575 21050
-Connection ~ 19575 21050
-Wire Wire Line
-	19575 21050 19575 21125
-$Comp
-L power:GND #PWR0188
-U 1 1 616E6152
-P 19175 21050
-F 0 "#PWR0188" H 19175 20800 50  0001 C CNN
-F 1 "GND" H 19175 20925 20  0000 C CNN
-F 2 "" H 19175 21050 50  0001 C CNN
-F 3 "" H 19175 21050 50  0001 C CNN
-	1    19175 21050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	18800 21325 18925 21325
-Wire Wire Line
-	18800 21325 18800 20375
 Wire Wire Line
 	21075 20375 21075 21425
 Wire Wire Line
-	19125 21325 19175 21325
-Wire Wire Line
-	18800 20375 21075 20375
-Wire Wire Line
 	21650 21425 21075 21425
+Text GLabel 34650 4750 3    50   Input ~ 0
+Col9
+Wire Wire Line
+	34650 4750 34650 4675
+Text GLabel 34400 4750 3    50   Input ~ 0
+Row5
+Wire Wire Line
+	34400 4750 34400 4675
+$Comp
+L Connector:AVR-ISP-6 J2
+U 1 1 5F68874C
+P 24625 6350
+F 0 "J2" H 24346 6446 50  0000 R CNN
+F 1 "AVR-ISP-6" H 24346 6355 50  0000 R CNN
+F 2 "acheron_Connectors:PinHeader_2x3_P2.54mm_Vertical" V 24375 6400 50  0001 C CNN
+F 3 " ~" H 23350 5800 50  0001 C CNN
+	1    24625 6350
+	1    0    0    -1  
+$EndComp
+Text GLabel 32225 3725 0    50   Input ~ 0
+SCLK
+Wire Wire Line
+	32225 3725 32275 3725
+Wire Wire Line
+	32275 3725 32275 3825
+Connection ~ 32275 3825
+Wire Wire Line
+	32275 3825 32300 3825
+Text GLabel 32225 3975 0    50   Input ~ 0
+MOSI
+Wire Wire Line
+	32225 3975 32275 3975
+Wire Wire Line
+	32275 3975 32275 4075
+Text GLabel 32225 4225 0    50   Input ~ 0
+MISO
+Wire Wire Line
+	32225 4225 32275 4225
+Connection ~ 32275 4075
+Wire Wire Line
+	32275 4075 32300 4075
+Connection ~ 32275 4325
+Wire Wire Line
+	32275 4325 32300 4325
+Wire Wire Line
+	32275 4225 32275 4325
+Text GLabel 25075 6250 2    50   Output ~ 0
+MOSI
+Text GLabel 25075 6350 2    40   Output ~ 0
+SCLK
+Text GLabel 25075 6150 2    50   Output ~ 0
+MISO
+Text GLabel 25075 6450 2    40   Output ~ 0
+~RST
+Wire Wire Line
+	25075 6350 25025 6350
+Wire Wire Line
+	25025 6250 25075 6250
+Wire Wire Line
+	25075 6150 25025 6150
+Wire Wire Line
+	25025 6450 25075 6450
+Text GLabel 24525 5800 1    50   Input ~ 0
+5V
+$Comp
+L power:GND #PWR0189
+U 1 1 63E1759D
+P 24525 6800
+F 0 "#PWR0189" H 24525 6550 50  0001 C CNN
+F 1 "GND" H 24530 6627 50  0000 C CNN
+F 2 "" H 24525 6800 50  0001 C CNN
+F 3 "" H 24525 6800 50  0001 C CNN
+	1    24525 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	24525 5800 24525 5850
+Wire Wire Line
+	24525 6750 24525 6800
+Wire Notes Line width 20
+	23525 5500 25500 5500
+Wire Notes Line width 20
+	25500 5500 25500 7300
+Wire Notes Line width 20
+	25500 7300 23525 7300
+Wire Notes Line width 20
+	23525 7300 23525 5500
+Text Notes 23575 5700 0    100  ~ 20
+ISP
+Wire Notes Line width 20
+	23525 5750 23900 5750
+Wire Notes Line width 20
+	23900 5750 23900 5500
+Wire Wire Line
+	4325 8500 8325 8500
+Wire Wire Line
+	16300 20375 21075 20375
 $EndSCHEMATC
