@@ -8,7 +8,7 @@ See [this page](https://gondolindrim.github.io/AcheronDocs/keenladies/intro.html
 
 Click [this link](http://www.keyboard-layout-editor.com/#/gists/6fcb43072b2efaa6a5129e3db566da86) for the KLE file for the Arctic.
 
-![Austin layouts](https://github.com/Gondolindrim/TheKeenLadies/raw/master/Graphics/KLE/TKL_KLE.png)
+![TKL layouts](https://github.com/Gondolindrim/TheKeenLadies/raw/master/Graphics/KLE/TKL_KLE.jpg)
 
 ## Renders
 
