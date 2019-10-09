@@ -6,7 +6,7 @@ See [this page](https://gondolindrim.github.io/AcheronDocs/keenladies/intro.html
 
 ## Supported layouts
 
-Click [this link](http://www.keyboard-layout-editor.com/#/gists/6fcb43072b2efaa6a5129e3db566da86) for the KLE file for the Arctic.
+Click [this link](http://www.keyboard-layout-editor.com/#/gists/6fcb43072b2efaa6a5129e3db566da86) for the KLE file for the TheKeenLadies PCB.
 
 ![TKL layouts](https://github.com/Gondolindrim/TheKeenLadies/raw/master/Graphics/KLE/TKL_KLE.jpg)
 
