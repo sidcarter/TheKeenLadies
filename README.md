@@ -2,7 +2,7 @@
 
 ![alt text](https://raw.githubusercontent.com/Gondolindrim/acheronLibrary/master/graphics/acheronReadme.png "Acheron Logo")
 
-See [this page](https://gondolindrim.github.io/AcheronDocs/keenladies/intro.html) for the ArcticPCB documentation.
+See [this page](https://gondolindrim.github.io/AcheronDocs/keenladies/intro.html) for the TheKeenLadies documentation.
 
 ## Supported layouts
 
