@@ -1,3 +1,6 @@
 [submodule "PCB Files/AcheronLibrary"]
 	path = PCB Files/AcheronLibrary
 	url = http://github.com/Gondolindrim/AcheronLibrary
+[submodule "PCB_Files/AcheronLibrary"]
+	path = PCB_Files/AcheronLibrary
+	url = http://github.com/Gondolindrim/AcheronLibrary
