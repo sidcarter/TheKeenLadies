@@ -41,7 +41,7 @@ L Device:C_Small CX2
 U 1 1 5D2AE963
 P 35775 8450
 F 0 "CX2" H 35875 8475 30  0000 L CNN
-F 1 "8.2pF" H 35875 8425 30  0000 L CNN
+F 1 "12pF" H 35875 8425 30  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 35775 8450 50  0001 C CNN
 F 3 "~" H 35775 8450 50  0001 C CNN
 	1    35775 8450
@@ -52,7 +52,7 @@ L Device:C_Small CX1
 U 1 1 5D2B060B
 P 35525 8450
 F 0 "CX1" H 35325 8475 30  0000 L CNN
-F 1 "8.2pF" H 35325 8425 30  0000 L CNN
+F 1 "12pF" H 35325 8425 30  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 35525 8450 50  0001 C CNN
 F 3 "~" H 35525 8450 50  0001 C CNN
 	1    35525 8450
@@ -68,8 +68,6 @@ Wire Wire Line
 	33775 5375 34175 5375
 Wire Wire Line
 	33775 5375 33775 5650
-Text GLabel 33675 5375 0    50   Input ~ 0
-5V
 Wire Wire Line
 	33675 5375 33775 5375
 Connection ~ 33775 5375
@@ -96,8 +94,6 @@ Wire Wire Line
 	34775 4775 34775 4525
 Wire Wire Line
 	34775 4525 34750 4525
-Text GLabel 34525 4400 1    50   Input ~ 0
-5V
 $Comp
 L Device:C_Small CB5
 U 1 1 5D360B6B
@@ -117,8 +113,6 @@ Wire Wire Line
 	37025 4775 37025 4525
 Wire Wire Line
 	37025 4525 37000 4525
-Text GLabel 36775 4400 1    50   Input ~ 0
-5V
 Wire Wire Line
 	36775 4400 36775 4525
 Connection ~ 36775 4525
@@ -141,8 +135,6 @@ Wire Wire Line
 	37375 7625 37550 7625
 Wire Wire Line
 	37550 7625 37550 7600
-Text GLabel 37675 7375 2    50   Input ~ 0
-5V
 Wire Wire Line
 	37675 7375 37550 7375
 Connection ~ 37550 7375
@@ -165,8 +157,6 @@ Wire Wire Line
 	35275 7975 35275 8200
 Wire Wire Line
 	35275 8200 35250 8200
-Text GLabel 35025 8300 3    50   Input ~ 0
-5V
 Wire Wire Line
 	35025 8300 35025 8200
 Connection ~ 35025 8200
@@ -188,7 +178,7 @@ Connection ~ 37550 7625
 Wire Wire Line
 	33725 6125 33775 6125
 Connection ~ 33775 6125
-Text Notes 38875 5650 0    50   ~ 0
+Text Notes 38350 5650 0    50   ~ 0
 Decoupling or bypass capacitors.\nThe AN2519 [2] indicates that the\ntypical decoupling capacitor values are 100nF\nfor analog voltage. It also recomends that the\nmain VCC voltage be decoupled, but does not \necommend a value for this. The value used was 1uF.
 $Comp
 L Device:C_Small CB3
@@ -201,8 +191,6 @@ F 3 "~" H 34900 4525 50  0001 C CNN
 	1    34900 4525
 	0    -1   -1   0   
 $EndComp
-Text GLabel 35025 4425 1    50   Input ~ 0
-5V
 Wire Wire Line
 	35025 4425 35025 4525
 Wire Wire Line
@@ -223,11 +211,11 @@ F 3 "~" H 34025 6375 50  0001 C CNN
 	1    34025 6375
 	0    1    1    0   
 $EndComp
-Text Notes 38875 6125 0    50   ~ 0
+Text Notes 38350 6125 0    50   ~ 0
 CU1: this is the UCAP pin capacitor.\nThe MCU datasheet [1] specifies\nthat this pin should be connected to an\nexternal 1uF capacitor.
-Text Notes 38875 5150 0    50   ~ 10
+Text Notes 38350 5150 0    50   ~ 10
 CBx capacitors: 
-Text Notes 38875 5800 0    50   ~ 10
+Text Notes 38350 5800 0    50   ~ 10
 CU1
 Text GLabel 33950 6625 0    50   Input ~ 0
 5V
@@ -260,9 +248,13 @@ L Switch:SW_Push SW_RST1
 U 1 1 5D51D9F3
 P 32550 6550
 F 0 "SW_RST1" H 32550 6450 30  0000 C CNN
-F 1 "SW_Push" H 32550 6400 30  0000 C CNN
+F 1 "K2-1187SQ-A4SW-06" H 32550 6400 20  0000 C CNN
 F 2 "acheron_Hardware:smdPushBtn" H 32550 6750 50  0001 C CNN
 F 3 "~" H 32550 6750 50  0001 C CNN
+F 4 "SMD 5.2x5.2mm" H 32550 6550 50  0001 C CNN "Package"
+F 5 "Korean Hroparts" H 32550 6550 50  0001 C CNN "Manufacturer "
+F 6 "K2-1187SQ-A4SW-06" H 32550 6550 50  0001 C CNN "Manufacturer Part No."
+F 7 "C92584" H 32550 6550 50  0001 C CNN "LCSC Part No."
 	1    32550 6550
 	0    -1   -1   0   
 $EndComp
@@ -282,12 +274,12 @@ $EndComp
 Text GLabel 32550 5550 1    50   Input ~ 0
 5V
 Wire Wire Line
-	32550 5550 32550 5625
+	32550 5550 32550 5600
 Wire Wire Line
 	32900 6200 32900 6250
-Text Notes 38850 6575 0    50   ~ 0
+Text Notes 38325 6575 0    50   ~ 0
 The reset network added was taken directly\nfrom Application Note [2]. See section 3\nfor details.
-Text Notes 38850 6325 0    50   ~ 10
+Text Notes 38325 6325 0    50   ~ 10
 RESET NETWORK
 Wire Wire Line
 	35775 8275 35775 8350
@@ -313,25 +305,23 @@ Wire Wire Line
 	33875 6375 33925 6375
 Wire Wire Line
 	34125 6375 34175 6375
-Text Notes 38875 4975 0    50   ~ 0
-Crystal load capacitors. Thedatasheet [3] recommends\na 8pF value. The 8.2pF value was used because it was \nmore commonly found.
-Text Notes 38875 4725 0    50   ~ 10
+Text Notes 38325 7100 0    50   ~ 10
 CX1/2 capacitors:
-Text Notes 700  23900 0    50   ~ 0
-https://www.ndk.com/images/products/catalog/c_NX5032GC-STD-CSK-6_e.pdf
-Text Notes 700  23800 0    50   ~ 10
-\n[3] NX5032GC 16MHz crystal datasheet
-Text Notes 700  23625 0    50   ~ 0
+Text Notes 700  23750 0    50   ~ 0
+https://cdn-shop.adafruit.com/datasheets/WS2811.pdf
+Text Notes 700  23650 0    50   ~ 10
+[3] WS2811 LED driver IC datasheet
+Text Notes 700  23475 0    50   ~ 0
 http://ww1.microchip.com/downloads/en/AppNotes/AN2519-AVR-Microcontroller-Hardware-Design-Considerations-00002519B.pdf
-Text Notes 700  23525 0    50   ~ 10
+Text Notes 700  23375 0    50   ~ 10
 [2]  AN2519 Application Note:  AVR® Microcontroller Hardware Design Considerations
-Text Notes 700  23375 0    50   ~ 0
+Text Notes 700  23225 0    50   ~ 0
 http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf
-Text Notes 700  23275 0    50   ~ 10
+Text Notes 700  23125 0    50   ~ 10
 [1] ATMEGA32U4 datasheet
-Text Notes 700  24050 0    50   ~ 10
+Text Notes 700  23900 0    50   ~ 10
 \n[4] AN232B-06 Application Note
-Text Notes 700  24150 0    50   ~ 0
+Text Notes 700  24000 0    50   ~ 0
 https://www.ftdichip.com/Support/Documents/AppNotes/AN232B-06_11.pdf
 Text GLabel 34125 5625 0    50   Input ~ 0
 DN
@@ -346,7 +336,7 @@ L Device:R RHWB1
 U 1 1 5DDD93F5
 P 37575 5125
 F 0 "RHWB1" V 37425 5125 30  0000 C CNN
-F 1 "1k" V 37475 5125 30  0000 C CNN
+F 1 "10k" V 37475 5125 30  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 37505 5125 50  0001 C CNN
 F 3 "~" H 37575 5125 50  0001 C CNN
 	1    37575 5125
@@ -356,15 +346,15 @@ Wire Wire Line
 	37775 5125 37725 5125
 Wire Wire Line
 	37425 5125 37375 5125
-Text Notes 38850 6775 0    50   ~ 10
+Text Notes 38325 6775 0    50   ~ 10
 RHWB1
-Text Notes 38850 6950 0    50   ~ 0
+Text Notes 38325 6950 0    50   ~ 0
 Datasheet [1] recommends that the HWB pin\nbe connected to GNd through a 1k resistor.
-Text Notes 700  24275 0    50   ~ 10
+Text Notes 700  24125 0    50   ~ 10
 [5] USBLC6-2 Datasheet
-Text Notes 700  24375 0    50   ~ 0
+Text Notes 700  24225 0    50   ~ 0
 https://www.st.com/resource/en/datasheet/usblc6-2.pdf
-Text Notes 700  23100 0    100  ~ 20
+Text Notes 700  22950 0    100  ~ 20
 REFERENCES
 Wire Wire Line
 	32550 6350 32550 6300
@@ -447,7 +437,11 @@ P 23550 1675
 F 0 "DF1" V 23580 1596 30  0000 R CNN
 F 1 "RB060M-60TR" V 23520 1596 30  0000 R CNN
 F 2 "acheron_Components:D_SOD-123" H 23550 1675 50  0001 C CNN
-F 3 "~" H 23550 1675 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/SK-RB060M-60_C115330.pdf" H 23550 1675 50  0001 C CNN
+F 4 "SOD-123F" V 23550 1675 50  0001 C CNN "Package"
+F 5 "Shikues" V 23550 1675 50  0001 C CNN "Manufacturer"
+F 6 "RB060M-60" V 23550 1675 50  0001 C CNN "Manufacturer Part No."
+F 7 "C115330" V 23550 1675 50  0001 C CNN "LCSC Part No."
 	1    23550 1675
 	0    1    1    0   
 $EndComp
@@ -464,7 +458,7 @@ L Device:C_Small CSH1
 U 1 1 5DA9ED98
 P 21450 4375
 F 0 "CSH1" H 21275 4400 30  0000 C CNN
-F 1 "100nF" H 21275 4350 30  0000 C CNN
+F 1 "4.7nF" H 21275 4350 30  0000 C CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 21450 4375 50  0001 C CNN
 F 3 "~" H 21450 4375 50  0001 C CNN
 	1    21450 4375
@@ -476,9 +470,13 @@ L Device:Polyfuse F1
 U 1 1 5D5177BD
 P 23000 1475
 F 0 "F1" V 22822 1475 30  0000 C CNN
-F 1 "Polyfuse" V 22882 1475 30  0000 C CNN
+F 1 "PTC 1A trip" V 22882 1475 30  0000 C CNN
 F 2 "Fuse:Fuse_1206_3216Metric" H 23050 1275 50  0001 L CNN
-F 3 "~" H 23000 1475 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1903061031_Jinrui-Electronic-Materials-Co-JK-NSMD050-13-2V_C369159.pdf" H 23000 1475 50  0001 C CNN
+F 4 "1206" V 23000 1475 50  0001 C CNN "Package"
+F 5 "Jinrui Electronic Materials Co." V 23000 1475 50  0001 C CNN "Manufacturer"
+F 6 "JK-NSMD050-13.2V" V 23000 1475 50  0001 C CNN "Manufacturer Part No."
+F 7 "C369159" V 23000 1475 50  0001 C CNN "LCSC Part No."
 	1    23000 1475
 	0    1    1    0   
 $EndComp
@@ -598,7 +596,11 @@ P 35650 8275
 F 0 "X1" H 35350 8250 30  0000 L CNN
 F 1 "16MHz" H 35325 8300 30  0000 L CNN
 F 2 "acheron_Components:Crystal_SMD_2016-4Pin_2.0x1.6mm" H 35650 8275 50  0001 C CNN
-F 3 "~" H 35650 8275 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1909111631_Yangxing-Tech-X201616MOD4SI_C108155.pdf" H 35650 8275 50  0001 C CNN
+F 4 "2016" H 35650 8275 50  0001 C CNN "Footprint"
+F 5 "Yangxing Tech" H 35650 8275 50  0001 C CNN "Manufacturer "
+F 6 "X201616MOD4SI" H 35650 8275 50  0001 C CNN "Manufacturer Part No."
+F 7 "C108155" H 35650 8275 50  0001 C CNN "LCSC Part No."
 	1    35650 8275
 	-1   0    0    1   
 $EndComp
@@ -772,7 +774,7 @@ F 3 "" H 35275 8300 50  0001 C CNN
 $EndComp
 Text GLabel 22800 2925 2    50   Output ~ 0
 DBusP
-Text Label 21450 4150 0    50   ~ 10
+Text Label 21525 4150 0    30   Italic 0
 SHIELD
 NoConn ~ 22650 3775
 Wire Wire Line
@@ -902,13 +904,17 @@ Wire Wire Line
 Text GLabel 26975 2450 2    50   Input ~ 0
 DBusP
 $Comp
-L Power_Protection:USBLC6-2SC6 U201
+L Power_Protection:USBLC6-2SC6 U89
 U 1 1 5D929D02
 P 26425 2350
-F 0 "U201" H 26425 3350 50  0000 C CNN
+F 0 "U89" H 26425 3350 50  0000 C CNN
 F 1 "USBLC6-2SC6" H 26425 3275 50  0000 C CNN
-F 2 "acheron_Components:SOT-23-6" H 25675 2750 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 25675 2750 50  0001 C CNN
 F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 26625 2700 50  0001 C CNN
+F 4 "SOT-23-6" H 26425 2350 50  0001 C CNN "Package"
+F 5 "ST Microelectronics" H 26425 2350 50  0001 C CNN "Manufacturer"
+F 6 "USBLC6-2SC6" H 26425 2350 50  0001 C CNN "Manufacturer Part No."
+F 7 "C7519" H 26425 2350 50  0001 C CNN "LCSC Part No."
 	1    26425 2350
 	1    0    0    -1  
 $EndComp
@@ -1002,7 +1008,10 @@ P 9625 12900
 F 0 "U1" H 9325 12625 50  0000 C CNN
 F 1 "WS2811M" H 9325 12550 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 9325 13050 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 9425 13150 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 9425 13150 50  0001 C CNN
+F 4 "MSOP-8" H 9625 12900 50  0001 C CNN "Package"
+F 5 "Worldsemi" H 9625 12900 50  0001 C CNN "Manufacturer"
+F 6 "WS2811" H 9625 12900 50  0001 C CNN "Manufacturer Part No."
 	1    9625 12900
 	1    0    0    -1  
 $EndComp
@@ -3332,31 +3341,29 @@ $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW82
 U 1 1 625E2A16
-P 11350 9250
-F 0 "SW82" H 11350 9325 30  0000 C CNN
-F 1 "RALT_B1" H 11350 9275 30  0000 C CNN
-F 2 "acheron_MX:MX125" H 11350 9250 50  0001 C CNN
-F 3 "" H 11350 9250 50  0001 C CNN
-	1    11350 9250
+P 10350 9250
+F 0 "SW82" H 10350 9325 30  0000 C CNN
+F 1 "RALT_B1" H 10350 9275 30  0000 C CNN
+F 2 "acheron_MX:MX125" H 10350 9250 50  0001 C CNN
+F 3 "" H 10350 9250 50  0001 C CNN
+	1    10350 9250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D82
 U 1 1 625E2A1C
-P 11350 8750
-F 0 "D82" V 11325 8675 30  0000 R CNN
-F 1 "1N4148" V 11375 8675 30  0000 R CNN
-F 2 "acheron_Components:D_SOD-123" H 11350 8750 50  0001 C CNN
-F 3 "~" H 11350 8750 50  0001 C CNN
-	1    11350 8750
+P 10350 8750
+F 0 "D82" V 10325 8675 30  0000 R CNN
+F 1 "1N4148" V 10375 8675 30  0000 R CNN
+F 2 "acheron_Components:D_SOD-123" H 10350 8750 50  0001 C CNN
+F 3 "~" H 10350 8750 50  0001 C CNN
+	1    10350 8750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
 	2325 8600 2325 8500
 Wire Wire Line
-	2325 8500 1575 8500
-Wire Wire Line
-	11000 9250 10825 9250
+	10000 9250 9825 9250
 Wire Wire Line
 	1975 9250 1800 9250
 Text GLabel 1575 8500 0    50   Output ~ 0
@@ -3364,7 +3371,7 @@ Row6
 Wire Wire Line
 	7975 9250 7800 9250
 Wire Wire Line
-	11350 8600 11350 8500
+	10350 8600 10350 8500
 Connection ~ 8325 8500
 Wire Wire Line
 	8325 8600 8325 8500
@@ -3390,7 +3397,6 @@ F 3 "" H 8325 9250 50  0001 C CNN
 	1    8325 9250
 	1    0    0    -1  
 $EndComp
-Connection ~ 4325 8500
 Wire Wire Line
 	4325 8600 4325 8500
 Wire Wire Line
@@ -3406,9 +3412,6 @@ F 3 "~" H 4325 8750 50  0001 C CNN
 	1    4325 8750
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2325 8500 3325 8500
-Connection ~ 2325 8500
 $Comp
 L acheronSymbols:MXSwitch SW80
 U 1 1 625E2A7A
@@ -3447,60 +3450,31 @@ Wire Wire Line
 $Comp
 L Device:D D83
 U 1 1 625E2A9C
-P 12350 8750
-F 0 "D83" V 12325 8675 30  0000 R CNN
-F 1 "1N4148" V 12375 8675 30  0000 R CNN
-F 2 "acheron_Components:D_SOD-123" H 12350 8750 50  0001 C CNN
-F 3 "~" H 12350 8750 50  0001 C CNN
-	1    12350 8750
+P 11350 8750
+F 0 "D83" V 11325 8675 30  0000 R CNN
+F 1 "1N4148" V 11375 8675 30  0000 R CNN
+F 2 "acheron_Components:D_SOD-123" H 11350 8750 50  0001 C CNN
+F 3 "~" H 11350 8750 50  0001 C CNN
+	1    11350 8750
 	0    1    1    0   
 $EndComp
 $Comp
 L acheronSymbols:MXSwitch SW83
 U 1 1 625E2AA2
-P 12350 9250
-F 0 "SW83" H 12350 9325 30  0000 C CNN
-F 1 "RGUI_B1" H 12350 9275 30  0000 C CNN
-F 2 "acheron_MX:MX125" H 12350 9250 50  0001 C CNN
-F 3 "" H 12350 9250 50  0001 C CNN
-	1    12350 9250
+P 11350 9250
+F 0 "SW83" H 11350 9325 30  0000 C CNN
+F 1 "RGUI_B1" H 11350 9275 30  0000 C CNN
+F 2 "acheron_MX:MX125" H 11350 9250 50  0001 C CNN
+F 3 "" H 11350 9250 50  0001 C CNN
+	1    11350 9250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3325 8600 3325 8500
 Connection ~ 3325 8500
 Wire Wire Line
-	3325 8500 4325 8500
-Wire Wire Line
-	12350 8600 12350 8500
-Connection ~ 12350 8500
+	11350 8600 11350 8500
 Connection ~ 11350 8500
-Wire Wire Line
-	11350 8500 12350 8500
-Wire Wire Line
-	14350 8600 14350 8500
-$Comp
-L Device:D D84
-U 1 1 625E2ABC
-P 14350 8750
-F 0 "D84" V 14325 8675 30  0000 R CNN
-F 1 "1N4148" V 14375 8675 30  0000 R CNN
-F 2 "acheron_Components:D_SOD-123" H 14350 8750 50  0001 C CNN
-F 3 "~" H 14350 8750 50  0001 C CNN
-	1    14350 8750
-	0    1    1    0   
-$EndComp
-$Comp
-L acheronSymbols:MXSwitch SW84
-U 1 1 625E2AC2
-P 14350 9250
-F 0 "SW84" H 14350 9325 30  0000 C CNN
-F 1 "MENU_R1" H 14350 9275 30  0000 C CNN
-F 2 "acheron_MX:MX125" H 14350 9250 50  0001 C CNN
-F 3 "" H 14350 9250 50  0001 C CNN
-	1    14350 9250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	18325 8600 18325 8500
 $Comp
@@ -3551,8 +3525,6 @@ Wire Wire Line
 	13825 6750 14000 6750
 Wire Wire Line
 	13825 8000 13950 8000
-Wire Wire Line
-	13825 9250 14000 9250
 $Comp
 L Device:D D85
 U 1 1 63463139
@@ -3646,71 +3618,11 @@ Wire Wire Line
 Connection ~ 17800 8000
 Wire Wire Line
 	17800 8000 17800 9250
-Connection ~ 3800 8000
 Wire Wire Line
 	3325 7350 3325 7250
 Connection ~ 3325 7250
 Wire Wire Line
 	3325 7250 4325 7250
-$Comp
-L acheronSymbols:MXSwitch SW89
-U 1 1 63D90E30
-P 2325 10025
-F 0 "SW89" H 2325 10100 30  0000 C CNN
-F 1 "LCTRL_B2" H 2325 10050 30  0000 C CNN
-F 2 "acheron_MX:MX150" H 2325 10025 50  0001 C CNN
-F 3 "" H 2325 10025 50  0001 C CNN
-	1    2325 10025
-	1    0    0    -1  
-$EndComp
-$Comp
-L acheronSymbols:MXSwitch SW92
-U 1 1 63D90E58
-P 4325 10025
-F 0 "SW92" H 4325 10100 30  0000 C CNN
-F 1 "LALT_B2" H 4325 10050 30  0000 C CNN
-F 2 "acheron_MX:MX150" H 4325 10025 50  0001 C CNN
-F 3 "" H 4325 10025 50  0001 C CNN
-	1    4325 10025
-	1    0    0    -1  
-$EndComp
-$Comp
-L acheronSymbols:MXSwitch SW90
-U 1 1 63D90E67
-P 3325 10025
-F 0 "SW90" H 3325 10100 30  0000 C CNN
-F 1 "LGUI_B2" H 3325 10050 30  0000 C CNN
-F 2 "acheron_MX:MX100" H 3325 10025 50  0001 C CNN
-F 3 "" H 3325 10025 50  0001 C CNN
-	1    3325 10025
-	1    0    0    -1  
-$EndComp
-$Comp
-L acheronSymbols:MXSwitch SW98
-U 1 1 63D90E74
-P 12350 10025
-F 0 "SW98" H 12350 10100 30  0000 C CNN
-F 1 "RALT_B2" H 12350 10050 30  0000 C CNN
-F 2 "acheron_MX:MX150" H 12350 10025 50  0001 C CNN
-F 3 "" H 12350 10025 50  0001 C CNN
-	1    12350 10025
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	12000 10025 11825 10025
-$Comp
-L acheronSymbols:MXSwitch SW100
-U 1 1 63D90E82
-P 14350 10025
-F 0 "SW100" H 14350 10100 30  0000 C CNN
-F 1 "RGUI_R2" H 14350 10050 30  0000 C CNN
-F 2 "acheron_MX:MX100" H 14350 10025 50  0001 C CNN
-F 3 "" H 14350 10025 50  0001 C CNN
-	1    14350 10025
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13825 10025 14000 10025
 $Comp
 L acheronSymbols:MXSwitch SW101
 U 1 1 63D90E91
@@ -3726,18 +3638,12 @@ Wire Wire Line
 	15825 10025 16000 10025
 Wire Wire Line
 	1800 8000 1800 9250
-Connection ~ 1800 8000
 Wire Wire Line
-	3800 10025 3975 10025
-Connection ~ 11825 8000
-Wire Wire Line
-	11825 9250 12000 9250
+	10825 9250 11000 9250
 Wire Wire Line
 	2325 8900 2425 8900
 Connection ~ 2325 8900
 Text GLabel 2425 8900 2    50   BiDi ~ 0
-L1
-Text GLabel 2325 9675 2    50   BiDi ~ 0
 L1
 Wire Wire Line
 	3325 8900 3425 8900
@@ -3752,63 +3658,33 @@ Wire Wire Line
 Text GLabel 8425 8900 2    50   BiDi ~ 0
 L4
 Wire Wire Line
-	11350 8900 11450 8900
-Text GLabel 11450 8900 2    50   BiDi ~ 0
+	10350 8900 10450 8900
+Text GLabel 10450 8900 2    50   BiDi ~ 0
 L5
 Wire Wire Line
-	12350 8900 12450 8900
-Text GLabel 12450 8900 2    50   BiDi ~ 0
+	11350 8900 11450 8900
+Text GLabel 11450 8900 2    50   BiDi ~ 0
 L6
-Wire Wire Line
-	14350 8900 14450 8900
-Text GLabel 14450 8900 2    50   BiDi ~ 0
-L7
 Wire Wire Line
 	16350 8900 16450 8900
 Text GLabel 16450 8900 2    50   BiDi ~ 0
 L8
-Text GLabel 3325 9675 2    50   BiDi ~ 0
-L2
-Text GLabel 4325 9675 2    50   BiDi ~ 0
-L3
-Text GLabel 12350 9675 2    50   BiDi ~ 0
-L6
-Text GLabel 14350 9675 2    50   BiDi ~ 0
-L7
 Text GLabel 16350 9675 2    50   BiDi ~ 0
 L8
 Wire Wire Line
 	15825 9250 15825 10025
 Wire Wire Line
-	13825 9250 13825 10025
-Wire Wire Line
-	11825 8000 11825 9250
+	10825 8000 10825 9250
 Wire Wire Line
 	5800 6750 5800 8000
-Wire Wire Line
-	1800 9250 1800 10025
-Wire Wire Line
-	1800 10025 1975 10025
-Connection ~ 1800 9250
 Wire Wire Line
 	2800 8000 2800 9250
 Wire Wire Line
 	3800 8000 3800 9250
 Wire Wire Line
-	3800 9250 3800 10025
-Connection ~ 3800 9250
-Connection ~ 2800 9250
-Wire Wire Line
-	2800 9250 2800 10025
-Wire Wire Line
-	2975 10025 2800 10025
-Wire Wire Line
 	7800 8000 7800 9250
 Wire Wire Line
 	15825 5500 15825 6750
-Wire Wire Line
-	11825 9250 11825 10025
-Connection ~ 11825 9250
 $Comp
 L acheronSymbols:MXSwitch SW105
 U 1 1 6C522CDE
@@ -3903,7 +3779,7 @@ Wire Wire Line
 Wire Wire Line
 	10825 6750 10825 8000
 Wire Wire Line
-	10825 9250 10825 8000
+	9825 9250 9825 8000
 Connection ~ 10825 8000
 Wire Wire Line
 	12100 13275 12100 13225
@@ -3943,7 +3819,10 @@ P 12100 12925
 F 0 "U2" H 11800 12675 50  0000 C CNN
 F 1 "WS2811M" H 11800 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 11800 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 11900 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 11900 13175 50  0001 C CNN
+F 4 "Worldsemi" H 12100 12925 50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 12100 12925 50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 12100 12925 50  0001 C CNN "Package"
 	1    12100 12925
 	1    0    0    -1  
 $EndComp
@@ -3985,7 +3864,10 @@ P 14600 12925
 F 0 "U3" H 14300 12675 50  0000 C CNN
 F 1 "WS2811M" H 14300 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 14300 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 14400 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 14400 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    14600 12925
 	1    0    0    -1  
 $EndComp
@@ -4027,7 +3909,10 @@ P 17100 12925
 F 0 "U4" H 16800 12675 50  0000 C CNN
 F 1 "WS2811M" H 16800 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 16800 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 16900 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 16900 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    17100 12925
 	1    0    0    -1  
 $EndComp
@@ -4067,7 +3952,10 @@ P 19575 12925
 F 0 "U5" H 19275 12675 50  0000 C CNN
 F 1 "WS2811M" H 19275 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 19275 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 19375 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 19375 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    19575 12925
 	1    0    0    -1  
 $EndComp
@@ -4109,7 +3997,10 @@ P 22075 12925
 F 0 "U6" H 21775 12675 50  0000 C CNN
 F 1 "WS2811M" H 21775 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 21775 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 21875 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 21875 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    22075 12925
 	1    0    0    -1  
 $EndComp
@@ -4151,7 +4042,10 @@ P 24575 12925
 F 0 "U7" H 24275 12675 50  0000 C CNN
 F 1 "WS2811M" H 24275 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 24275 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 24375 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 24375 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    24575 12925
 	1    0    0    -1  
 $EndComp
@@ -4162,7 +4056,10 @@ P 10275 12900
 F 0 "L1" H 10275 13397 50  0000 C CNN
 F 1 "LED_BGRA" H 10275 13306 50  0000 C CNN
 F 2 "acheron_Components:LED_RGB_SMD_6028_2.8x3.5mm_Round" H 10275 12850 50  0001 C CNN
-F 3 "~" H 10275 12850 50  0001 C CNN
+F 3 "https://hz-icbuim-file.oss-cn-beijing.aliyuncs.com/file/6513a5f5a98b7e78c2ac4d163a6d2b87.pdf?Expires=1571055418&OSSAccessKeyId=LTAIxlzvmECyZvmX&Signature=LvjTlf8vbW3t50PPFsCuRDWUcs4%3D&response-content-disposition=filename%3D%226028%20RGB%E5%85%B1%E9%98%B3%20high%20luminance.pdf%22" H 10275 12850 50  0001 C CNN
+F 4 "6028 RGB LED" H 10275 12900 50  0001 C CNN "Package"
+F 5 "Shenzhen Lianxinrui Technology" H 10275 12900 50  0001 C CNN "Manufacturer"
+F 6 "CP-6028SMDRGBC-CA" H 10275 12900 50  0001 C CNN "Manufacturer Part No."
 	1    10275 12900
 	1    0    0    -1  
 $EndComp
@@ -4272,7 +4169,10 @@ P 27050 12925
 F 0 "U8" H 26750 12675 50  0000 C CNN
 F 1 "WS2811M" H 26750 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 26750 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 26850 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 26850 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    27050 12925
 	1    0    0    -1  
 $EndComp
@@ -4325,7 +4225,10 @@ P 29550 12925
 F 0 "U9" H 29250 12675 50  0000 C CNN
 F 1 "WS2811M" H 29250 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 29250 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 29350 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 29350 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    29550 12925
 	1    0    0    -1  
 $EndComp
@@ -4378,7 +4281,10 @@ P 32050 12925
 F 0 "U10" H 31750 12675 50  0000 C CNN
 F 1 "WS2811M" H 31750 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 31750 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 31850 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 31850 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    32050 12925
 	1    0    0    -1  
 $EndComp
@@ -4431,7 +4337,10 @@ P 34550 12925
 F 0 "U11" H 34250 12675 50  0000 C CNN
 F 1 "WS2811M" H 34250 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 34250 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 34350 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 34350 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    34550 12925
 	1    0    0    -1  
 $EndComp
@@ -4484,7 +4393,10 @@ P 37050 12925
 F 0 "U12" H 36750 12675 50  0000 C CNN
 F 1 "WS2811M" H 36750 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 36750 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 36850 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 36850 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    37050 12925
 	1    0    0    -1  
 $EndComp
@@ -5302,7 +5214,10 @@ P 39550 12925
 F 0 "U13" H 39250 12675 50  0000 C CNN
 F 1 "WS2811M" H 39250 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 39250 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 39350 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 39350 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    39550 12925
 	1    0    0    -1  
 $EndComp
@@ -5420,7 +5335,10 @@ P 42050 12925
 F 0 "U14" H 41750 12675 50  0000 C CNN
 F 1 "WS2811M" H 41750 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 41750 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 41850 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 41850 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    42050 12925
 	1    0    0    -1  
 $EndComp
@@ -5538,7 +5456,10 @@ P 44550 12925
 F 0 "U15" H 44250 12675 50  0000 C CNN
 F 1 "WS2811M" H 44250 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 44250 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 44350 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 44350 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    44550 12925
 	1    0    0    -1  
 $EndComp
@@ -5654,7 +5575,10 @@ P 47050 12925
 F 0 "U16" H 46750 12675 50  0000 C CNN
 F 1 "WS2811M" H 46750 12600 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 46750 13075 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 46850 13175 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 46850 13175 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    47050 12925
 	1    0    0    -1  
 $EndComp
@@ -5761,7 +5685,10 @@ P 47075 14750
 F 0 "U34" H 46775 14475 50  0000 C CNN
 F 1 "WS2811M" H 46775 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 46775 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 46875 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 46875 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    47075 14750
 	1    0    0    -1  
 $EndComp
@@ -5860,7 +5787,10 @@ P 44575 14750
 F 0 "U33" H 44275 14475 50  0000 C CNN
 F 1 "WS2811M" H 44275 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 44275 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 44375 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 44375 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    44575 14750
 	1    0    0    -1  
 $EndComp
@@ -5969,7 +5899,10 @@ P 42075 14750
 F 0 "U32" H 41775 14475 50  0000 C CNN
 F 1 "WS2811M" H 41775 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 41775 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 41875 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 41875 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    42075 14750
 	1    0    0    -1  
 $EndComp
@@ -6108,7 +6041,10 @@ P 39575 14750
 F 0 "U31" H 39275 14475 50  0000 C CNN
 F 1 "WS2811M" H 39275 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 39275 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 39375 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 39375 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    39575 14750
 	1    0    0    -1  
 $EndComp
@@ -6226,7 +6162,10 @@ P 37075 14750
 F 0 "U105" H 36775 14475 50  0000 C CNN
 F 1 "WS2811M" H 36775 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 36775 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 36875 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 36875 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    37075 14750
 	1    0    0    -1  
 $EndComp
@@ -6300,9 +6239,6 @@ Wire Wire Line
 Wire Wire Line
 	12350 6000 14350 6000
 Wire Wire Line
-	13825 9250 13825 8000
-Connection ~ 13825 9250
-Wire Wire Line
 	14350 7350 14350 7250
 Connection ~ 14350 7250
 Wire Wire Line
@@ -6371,7 +6307,10 @@ P 2125 14750
 F 0 "U17" H 1825 14475 50  0000 C CNN
 F 1 "WS2811M" H 1825 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 1825 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 1925 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 1925 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    2125 14750
 	1    0    0    -1  
 $EndComp
@@ -6487,7 +6426,10 @@ P 4625 14750
 F 0 "U18" H 4325 14475 50  0000 C CNN
 F 1 "WS2811M" H 4325 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 4325 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 4425 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 4425 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    4625 14750
 	1    0    0    -1  
 $EndComp
@@ -6605,7 +6547,10 @@ P 7125 14750
 F 0 "U19" H 6825 14475 50  0000 C CNN
 F 1 "WS2811M" H 6825 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 6825 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 6925 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 6925 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    7125 14750
 	1    0    0    -1  
 $EndComp
@@ -6721,7 +6666,10 @@ P 9625 14750
 F 0 "U20" H 9325 14475 50  0000 C CNN
 F 1 "WS2811M" H 9325 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 9325 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 9425 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 9425 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    9625 14750
 	1    0    0    -1  
 $EndComp
@@ -6839,7 +6787,10 @@ P 12125 14750
 F 0 "U21" H 11825 14475 50  0000 C CNN
 F 1 "WS2811M" H 11825 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 11825 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 11925 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 11925 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    12125 14750
 	1    0    0    -1  
 $EndComp
@@ -6942,7 +6893,10 @@ P 14600 14750
 F 0 "U22" H 14300 14475 50  0000 C CNN
 F 1 "WS2811M" H 14300 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 14300 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 14400 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 14400 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    14600 14750
 	1    0    0    -1  
 $EndComp
@@ -7060,7 +7014,10 @@ P 17100 14750
 F 0 "U23" H 16800 14475 50  0000 C CNN
 F 1 "WS2811M" H 16800 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 16800 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 16900 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 16900 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    17100 14750
 	1    0    0    -1  
 $EndComp
@@ -7178,7 +7135,10 @@ P 19600 14750
 F 0 "U24" H 19300 14475 50  0000 C CNN
 F 1 "WS2811M" H 19300 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 19300 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 19400 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 19400 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    19600 14750
 	1    0    0    -1  
 $EndComp
@@ -7296,7 +7256,10 @@ P 22100 14750
 F 0 "U25" H 21800 14475 50  0000 C CNN
 F 1 "WS2811M" H 21800 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 21800 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 21900 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 21900 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    22100 14750
 	1    0    0    -1  
 $EndComp
@@ -7412,7 +7375,10 @@ P 24600 14750
 F 0 "U26" H 24300 14475 50  0000 C CNN
 F 1 "WS2811M" H 24300 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 24300 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 24400 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 24400 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    24600 14750
 	1    0    0    -1  
 $EndComp
@@ -7532,7 +7498,10 @@ P 27100 14750
 F 0 "U27" H 26800 14475 50  0000 C CNN
 F 1 "WS2811M" H 26800 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 26800 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 26900 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 26900 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    27100 14750
 	1    0    0    -1  
 $EndComp
@@ -7667,7 +7636,10 @@ P 32075 14750
 F 0 "U29" H 31775 14475 50  0000 C CNN
 F 1 "WS2811M" H 31775 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 31775 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 31875 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 31875 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    32075 14750
 	1    0    0    -1  
 $EndComp
@@ -7768,7 +7740,10 @@ P 34575 14750
 F 0 "U30" H 34275 14475 50  0000 C CNN
 F 1 "WS2811M" H 34275 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 34275 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 34375 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 34375 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    34575 14750
 	1    0    0    -1  
 $EndComp
@@ -7886,7 +7861,10 @@ P 29575 14750
 F 0 "U28" H 29275 14475 50  0000 C CNN
 F 1 "WS2811M" H 29275 14400 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 29275 14900 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 29375 15000 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 29375 15000 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    29575 14750
 	1    0    0    -1  
 $EndComp
@@ -8202,7 +8180,10 @@ P 2125 16175
 F 0 "U35" H 1825 15900 50  0000 C CNN
 F 1 "WS2811M" H 1825 15825 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 1825 16325 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 1925 16425 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 1925 16425 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    2125 16175
 	1    0    0    -1  
 $EndComp
@@ -8244,7 +8225,10 @@ P 4600 16200
 F 0 "U36" H 4300 15950 50  0000 C CNN
 F 1 "WS2811M" H 4300 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 4300 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 4400 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 4400 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    4600 16200
 	1    0    0    -1  
 $EndComp
@@ -8286,7 +8270,10 @@ P 7100 16200
 F 0 "U37" H 6800 15950 50  0000 C CNN
 F 1 "WS2811M" H 6800 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 6800 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 6900 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 6900 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    7100 16200
 	1    0    0    -1  
 $EndComp
@@ -8328,7 +8315,10 @@ P 9600 16200
 F 0 "U38" H 9300 15950 50  0000 C CNN
 F 1 "WS2811M" H 9300 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 9300 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 9400 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 9400 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    9600 16200
 	1    0    0    -1  
 $EndComp
@@ -8368,7 +8358,10 @@ P 12075 16200
 F 0 "U39" H 11775 15950 50  0000 C CNN
 F 1 "WS2811M" H 11775 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 11775 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 11875 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 11875 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    12075 16200
 	1    0    0    -1  
 $EndComp
@@ -8410,7 +8403,10 @@ P 14575 16200
 F 0 "U40" H 14275 15950 50  0000 C CNN
 F 1 "WS2811M" H 14275 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 14275 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 14375 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 14375 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    14575 16200
 	1    0    0    -1  
 $EndComp
@@ -8452,7 +8448,10 @@ P 17075 16200
 F 0 "U41" H 16775 15950 50  0000 C CNN
 F 1 "WS2811M" H 16775 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 16775 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 16875 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 16875 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    17075 16200
 	1    0    0    -1  
 $EndComp
@@ -8573,7 +8572,10 @@ P 19550 16200
 F 0 "U42" H 19250 15950 50  0000 C CNN
 F 1 "WS2811M" H 19250 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 19250 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 19350 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 19350 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    19550 16200
 	1    0    0    -1  
 $EndComp
@@ -8626,7 +8628,10 @@ P 22050 16200
 F 0 "U43" H 21750 15950 50  0000 C CNN
 F 1 "WS2811M" H 21750 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 21750 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 21850 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 21850 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    22050 16200
 	1    0    0    -1  
 $EndComp
@@ -8679,7 +8684,10 @@ P 24550 16200
 F 0 "U44" H 24250 15950 50  0000 C CNN
 F 1 "WS2811M" H 24250 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 24250 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 24350 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 24350 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    24550 16200
 	1    0    0    -1  
 $EndComp
@@ -8732,7 +8740,10 @@ P 27050 16200
 F 0 "U45" H 26750 15950 50  0000 C CNN
 F 1 "WS2811M" H 26750 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 26750 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 26850 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 26850 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    27050 16200
 	1    0    0    -1  
 $EndComp
@@ -8785,7 +8796,10 @@ P 29550 16200
 F 0 "U46" H 29250 15950 50  0000 C CNN
 F 1 "WS2811M" H 29250 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 29250 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 29350 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 29350 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    29550 16200
 	1    0    0    -1  
 $EndComp
@@ -9603,7 +9617,10 @@ P 32050 16200
 F 0 "U47" H 31750 15950 50  0000 C CNN
 F 1 "WS2811M" H 31750 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 31750 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 31850 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 31850 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    32050 16200
 	1    0    0    -1  
 $EndComp
@@ -9721,7 +9738,10 @@ P 34550 16200
 F 0 "U48" H 34250 15950 50  0000 C CNN
 F 1 "WS2811M" H 34250 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 34250 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 34350 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 34350 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    34550 16200
 	1    0    0    -1  
 $EndComp
@@ -9839,7 +9859,10 @@ P 37050 16200
 F 0 "U49" H 36750 15950 50  0000 C CNN
 F 1 "WS2811M" H 36750 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 36750 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 36850 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 36850 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    37050 16200
 	1    0    0    -1  
 $EndComp
@@ -10039,7 +10062,10 @@ P 39550 16200
 F 0 "U50" H 39250 15950 50  0000 C CNN
 F 1 "WS2811M" H 39250 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 39250 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 39350 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 39350 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    39550 16200
 	1    0    0    -1  
 $EndComp
@@ -10161,7 +10187,10 @@ P 42050 16200
 F 0 "U51" H 41750 15950 50  0000 C CNN
 F 1 "WS2811M" H 41750 15875 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 41750 16350 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 41850 16450 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 41850 16450 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    42050 16200
 	1    0    0    -1  
 $EndComp
@@ -10232,13 +10261,6 @@ Wire Wire Line
 	38800 16850 41075 16850
 Wire Wire Line
 	1350 14750 1350 16075
-Connection ~ 13825 8000
-Connection ~ 14350 8500
-Wire Wire Line
-	14350 8500 16350 8500
-Connection ~ 14350 8900
-Wire Wire Line
-	12350 8500 14350 8500
 Connection ~ 11825 3000
 Wire Wire Line
 	11825 3000 11825 4250
@@ -10324,7 +10346,10 @@ P 42075 18025
 F 0 "U64" H 41775 17750 50  0000 C CNN
 F 1 "WS2811M" H 41775 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 41775 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 41875 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 41875 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    42075 18025
 	1    0    0    -1  
 $EndComp
@@ -10423,7 +10448,10 @@ P 39575 18025
 F 0 "U63" H 39275 17750 50  0000 C CNN
 F 1 "WS2811M" H 39275 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 39275 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 39375 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 39375 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    39575 18025
 	1    0    0    -1  
 $EndComp
@@ -10539,7 +10567,10 @@ P 37075 18025
 F 0 "U62" H 36775 17750 50  0000 C CNN
 F 1 "WS2811M" H 36775 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 36775 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 36875 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 36875 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    37075 18025
 	1    0    0    -1  
 $EndComp
@@ -10657,7 +10688,10 @@ P 34575 18025
 F 0 "U61" H 34275 17750 50  0000 C CNN
 F 1 "WS2811M" H 34275 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 34275 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 34375 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 34375 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    34575 18025
 	1    0    0    -1  
 $EndComp
@@ -10762,7 +10796,10 @@ P 9600 18025
 F 0 "U52" H 9300 17750 50  0000 C CNN
 F 1 "WS2811M" H 9300 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 9300 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 9400 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 9400 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    9600 18025
 	1    0    0    -1  
 $EndComp
@@ -10880,7 +10917,10 @@ P 14600 18025
 F 0 "U53" H 14300 17750 50  0000 C CNN
 F 1 "WS2811M" H 14300 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 14300 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 14400 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 14400 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    14600 18025
 	1    0    0    -1  
 $EndComp
@@ -10998,7 +11038,10 @@ P 17100 18025
 F 0 "U54" H 16800 17750 50  0000 C CNN
 F 1 "WS2811M" H 16800 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 16800 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 16900 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 16900 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    17100 18025
 	1    0    0    -1  
 $EndComp
@@ -11116,7 +11159,10 @@ P 19600 18025
 F 0 "U55" H 19300 17750 50  0000 C CNN
 F 1 "WS2811M" H 19300 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 19300 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 19400 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 19400 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    19600 18025
 	1    0    0    -1  
 $EndComp
@@ -11232,7 +11278,10 @@ P 22100 18025
 F 0 "U56" H 21800 17750 50  0000 C CNN
 F 1 "WS2811M" H 21800 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 21800 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 21900 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 21900 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    22100 18025
 	1    0    0    -1  
 $EndComp
@@ -11352,7 +11401,10 @@ P 24600 18025
 F 0 "U57" H 24300 17750 50  0000 C CNN
 F 1 "WS2811M" H 24300 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 24300 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 24400 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 24400 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    24600 18025
 	1    0    0    -1  
 $EndComp
@@ -11487,7 +11539,10 @@ P 29575 18025
 F 0 "U59" H 29275 17750 50  0000 C CNN
 F 1 "WS2811M" H 29275 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 29275 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 29375 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 29375 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    29575 18025
 	1    0    0    -1  
 $EndComp
@@ -11588,7 +11643,10 @@ P 32075 18025
 F 0 "U60" H 31775 17750 50  0000 C CNN
 F 1 "WS2811M" H 31775 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 31775 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 31875 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 31875 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    32075 18025
 	1    0    0    -1  
 $EndComp
@@ -11704,7 +11762,10 @@ P 27075 18025
 F 0 "U58" H 26775 17750 50  0000 C CNN
 F 1 "WS2811M" H 26775 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 26775 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 26875 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 26875 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    27075 18025
 	1    0    0    -1  
 $EndComp
@@ -11939,7 +12000,10 @@ P 12100 18025
 F 0 "U102" H 11800 17750 50  0000 C CNN
 F 1 "WS2811M" H 11800 17675 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 11800 18175 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 11900 18275 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 11900 18275 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    12100 18025
 	1    0    0    -1  
 $EndComp
@@ -12030,7 +12094,10 @@ P 9600 19475
 F 0 "U65" H 9300 19200 50  0000 C CNN
 F 1 "WS2811M" H 9300 19125 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 9300 19625 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 9400 19725 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 9400 19725 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    9600 19475
 	1    0    0    -1  
 $EndComp
@@ -12072,7 +12139,10 @@ P 12075 19500
 F 0 "U66" H 11775 19250 50  0000 C CNN
 F 1 "WS2811M" H 11775 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 11775 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 11875 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 11875 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    12075 19500
 	1    0    0    -1  
 $EndComp
@@ -12114,7 +12184,10 @@ P 14575 19500
 F 0 "U67" H 14275 19250 50  0000 C CNN
 F 1 "WS2811M" H 14275 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 14275 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 14375 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 14375 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    14575 19500
 	1    0    0    -1  
 $EndComp
@@ -12156,7 +12229,10 @@ P 17075 19500
 F 0 "U68" H 16775 19250 50  0000 C CNN
 F 1 "WS2811M" H 16775 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 16775 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 16875 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 16875 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    17075 19500
 	1    0    0    -1  
 $EndComp
@@ -12196,7 +12272,10 @@ P 19550 19500
 F 0 "U69" H 19250 19250 50  0000 C CNN
 F 1 "WS2811M" H 19250 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 19250 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 19350 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 19350 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    19550 19500
 	1    0    0    -1  
 $EndComp
@@ -12238,7 +12317,10 @@ P 22050 19500
 F 0 "U70" H 21750 19250 50  0000 C CNN
 F 1 "WS2811M" H 21750 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 21750 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 21850 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 21850 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    22050 19500
 	1    0    0    -1  
 $EndComp
@@ -12280,7 +12362,10 @@ P 24550 19500
 F 0 "U71" H 24250 19250 50  0000 C CNN
 F 1 "WS2811M" H 24250 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 24250 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 24350 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 24350 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    24550 19500
 	1    0    0    -1  
 $EndComp
@@ -12401,7 +12486,10 @@ P 27025 19500
 F 0 "U72" H 26725 19250 50  0000 C CNN
 F 1 "WS2811M" H 26725 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 26725 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 26825 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 26825 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    27025 19500
 	1    0    0    -1  
 $EndComp
@@ -12454,7 +12542,10 @@ P 29525 19500
 F 0 "U73" H 29225 19250 50  0000 C CNN
 F 1 "WS2811M" H 29225 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 29225 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 29325 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 29325 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    29525 19500
 	1    0    0    -1  
 $EndComp
@@ -12507,7 +12598,10 @@ P 32025 19500
 F 0 "U74" H 31725 19250 50  0000 C CNN
 F 1 "WS2811M" H 31725 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 31725 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 31825 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 31825 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    32025 19500
 	1    0    0    -1  
 $EndComp
@@ -12560,7 +12654,10 @@ P 34525 19500
 F 0 "U75" H 34225 19250 50  0000 C CNN
 F 1 "WS2811M" H 34225 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 34225 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 34325 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 34325 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    34525 19500
 	1    0    0    -1  
 $EndComp
@@ -13313,7 +13410,10 @@ P 37025 19500
 F 0 "U103" H 36725 19250 50  0000 C CNN
 F 1 "WS2811M" H 36725 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 36725 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 36825 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 36825 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    37025 19500
 	1    0    0    -1  
 $EndComp
@@ -13429,7 +13529,10 @@ P 42025 19500
 F 0 "U104" H 41725 19250 50  0000 C CNN
 F 1 "WS2811M" H 41725 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 41725 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 41825 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 41825 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    42025 19500
 	1    0    0    -1  
 $EndComp
@@ -13545,7 +13648,10 @@ P 44525 19500
 F 0 "U77" H 44225 19250 50  0000 C CNN
 F 1 "WS2811M" H 44225 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 44225 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 44325 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 44325 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    44525 19500
 	1    0    0    -1  
 $EndComp
@@ -13693,13 +13799,17 @@ Wire Wire Line
 Wire Wire Line
 	8825 18025 9200 18025
 $Comp
-L acheronSymbols:ATMEGA32U4_QFN44 U200
+L acheronSymbols:ATMEGA32U4_QFN44 U90
 U 1 1 5E3D88B4
 P 35775 6375
-F 0 "U200" H 35700 6500 79  0000 L CNB
-F 1 "ATMEGA32U4_QFN44" H 35150 6325 79  0000 L CNB
+F 0 "U90" H 35700 6500 79  0000 L CNB
+F 1 "ATMEGA32U4-MU" H 35150 6325 79  0000 L CNB
 F 2 "acheron_Components:QFN-44-1EP_7x7mm_P0.5mm_EP5.2x5.2mm" H 35775 6375 50  0001 C CNN
-F 3 "" H 35775 6375 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Microchip-Tech-ATMEGA32U4-MU_C112161.pdf" H 35775 6375 50  0001 C CNN
+F 4 "QFN-44" H 35775 6375 50  0001 C CNN "Package"
+F 5 "ATMEL" H 35775 6375 50  0001 C CNN "Manufacturer"
+F 6 "ATMEGA32U4-MU" H 35775 6375 50  0001 C CNN "Manufacturer Part No."
+F 7 "C112161" H 35775 6375 50  0001 C CNN "LCSC Part No."
 	1    35775 6375
 	1    0    0    -1  
 $EndComp
@@ -13770,24 +13880,6 @@ Wire Wire Line
 	37375 6375 37450 6375
 Wire Wire Line
 	8800 6750 8800 8000
-Connection ~ 7800 9250
-Wire Wire Line
-	7800 9250 7800 10025
-Text GLabel 8325 9675 2    50   BiDi ~ 0
-L4
-$Comp
-L acheronSymbols:MXSwitch SW95
-U 1 1 63D90E4B
-P 8325 10025
-F 0 "SW95" H 8325 10100 30  0000 C CNN
-F 1 "SPACE_B2" H 8325 10050 30  0000 C CNN
-F 2 "acheron_MX:MX700R" H 8325 10025 50  0001 C CNN
-F 3 "" H 8325 10025 50  0001 C CNN
-	1    8325 10025
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7975 10025 7800 10025
 Text GLabel 37450 6125 2    50   Input ~ 0
 Col6
 Wire Wire Line
@@ -13815,8 +13907,8 @@ Wire Notes Line width 20
 Connection ~ 3325 8900
 Connection ~ 4325 8900
 Connection ~ 8325 8900
+Connection ~ 10350 8900
 Connection ~ 11350 8900
-Connection ~ 12350 8900
 Connection ~ 16825 5500
 Connection ~ 18800 5500
 Text Notes 775  1125 0    200  ~ 40
@@ -14008,7 +14100,10 @@ P 39525 19500
 F 0 "U76" H 39225 19250 50  0000 C CNN
 F 1 "WS2811M" H 39225 19175 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 39225 19650 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 39325 19750 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 39325 19750 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    39525 19500
 	1    0    0    -1  
 $EndComp
@@ -14109,7 +14204,10 @@ P 44550 21375
 F 0 "U88" H 44250 21100 50  0000 C CNN
 F 1 "WS2811M" H 44250 21025 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 44250 21525 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 44350 21625 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 44350 21625 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    44550 21375
 	1    0    0    -1  
 $EndComp
@@ -14208,7 +14306,10 @@ P 12075 21425
 F 0 "U78" H 11775 21150 50  0000 C CNN
 F 1 "WS2811M" H 11775 21075 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 11775 21575 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 11875 21675 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 11875 21675 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    12075 21425
 	1    0    0    -1  
 $EndComp
@@ -14326,7 +14427,10 @@ P 17075 21425
 F 0 "U80" H 16775 21150 50  0000 C CNN
 F 1 "WS2811M" H 16775 21075 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 16775 21575 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 16875 21675 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 16875 21675 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    17075 21425
 	1    0    0    -1  
 $EndComp
@@ -14440,7 +14544,10 @@ P 22050 21425
 F 0 "U81" H 21750 21150 50  0000 C CNN
 F 1 "WS2811M" H 21750 21075 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 21750 21575 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 21850 21675 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 21850 21675 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    22050 21425
 	1    0    0    -1  
 $EndComp
@@ -14558,7 +14665,10 @@ P 27050 21375
 F 0 "U82" H 26750 21100 50  0000 C CNN
 F 1 "WS2811M" H 26750 21025 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 26750 21525 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 26850 21625 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 26850 21625 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    27050 21375
 	1    0    0    -1  
 $EndComp
@@ -14672,7 +14782,10 @@ P 29550 21375
 F 0 "U83" H 29250 21100 50  0000 C CNN
 F 1 "WS2811M" H 29250 21025 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 29250 21525 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 29350 21625 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 29350 21625 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    29550 21375
 	1    0    0    -1  
 $EndComp
@@ -14788,7 +14901,10 @@ P 34550 21375
 F 0 "U84" H 34250 21100 50  0000 C CNN
 F 1 "WS2811M" H 34250 21025 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 34250 21525 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 34350 21625 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 34350 21625 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    34550 21375
 	1    0    0    -1  
 $EndComp
@@ -14923,7 +15039,10 @@ P 39550 21375
 F 0 "U86" H 39250 21100 50  0000 C CNN
 F 1 "WS2811M" H 39250 21025 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 39250 21525 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 39350 21625 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 39350 21625 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    39550 21375
 	1    0    0    -1  
 $EndComp
@@ -15024,7 +15143,10 @@ P 42050 21375
 F 0 "U87" H 41750 21100 50  0000 C CNN
 F 1 "WS2811M" H 41750 21025 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 41750 21525 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 41850 21625 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 41850 21625 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    42050 21375
 	1    0    0    -1  
 $EndComp
@@ -15140,7 +15262,10 @@ P 37050 21375
 F 0 "U85" H 36750 21100 50  0000 C CNN
 F 1 "WS2811M" H 36750 21025 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 36750 21525 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 36850 21625 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 36850 21625 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    37050 21375
 	1    0    0    -1  
 $EndComp
@@ -15329,7 +15454,10 @@ P 14575 21425
 F 0 "U79" H 14275 21150 50  0000 C CNN
 F 1 "WS2811M" H 14275 21075 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 14275 21575 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 14375 21675 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 14375 21675 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    14575 21425
 	1    0    0    -1  
 $EndComp
@@ -15386,7 +15514,7 @@ Wire Wire Line
 Wire Wire Line
 	36050 21375 36650 21375
 Wire Wire Line
-	8325 8500 11350 8500
+	8325 8500 10350 8500
 Wire Wire Line
 	28775 20325 33550 20325
 Wire Wire Line
@@ -15454,7 +15582,10 @@ P 24550 21425
 F 0 "U95" H 24250 21150 50  0000 C CNN
 F 1 "WS2811M" H 24250 21075 50  0000 C CNN
 F 2 "acheron_Components:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm" H 24250 21575 50  0001 C CNN
-F 3 "https://cdn-shop.adafruit.com/datasheets/WS2811.pdf" H 24350 21675 50  0001 C CNN
+F 3 "https://www.tme.com/Document/e5aca838c4258bf1e5308cbbf0e3f322/WS2811-M.pdf" H 24350 21675 50  0001 C CNN
+F 4 "Worldsemi" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "WS2811" H 0   0   50  0001 C CNN "Manufacturer Part No."
+F 6 "MSOP-8" H 0   0   50  0001 C CNN "Package"
 	1    24550 21425
 	1    0    0    -1  
 $EndComp
@@ -15615,8 +15746,6 @@ Wire Notes Line width 20
 Wire Notes Line width 20
 	23900 5750 23900 5500
 Wire Wire Line
-	4325 8500 8325 8500
-Wire Wire Line
 	16300 20375 21075 20375
 Text GLabel 35275 4700 1    50   Input ~ 0
 Col15
@@ -15649,10 +15778,13 @@ $Comp
 L acheronSymbols:TYPE-C-31-M12_13 J1
 U 1 1 5E53CECE
 P 22050 2625
-F 0 "J1" H 22107 3092 50  0000 C CNN
-F 1 "USB_C" H 22107 3001 50  0000 C CNN
-F 2 "acheron_Connectors:TYPE-C-31-M-12" H 22200 2575 50  0001 C CNN
-F 3 "~" H 22200 2575 50  0001 C CNN
+F 0 "J1" H 22050 3500 50  0000 C CNN
+F 1 "TYPEC-M-12" H 22050 3400 50  0000 C CNN
+F 2 "acheronConnectors:TYPE-C-31-M-12" H 22200 2575 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 22200 2575 50  0001 C CNN
+F 4 "Korean Hroparts" H 22050 2625 50  0001 C CNN "Manufacturer"
+F 5 "TYPE-C-31-M-12" H 22050 2625 50  0001 C CNN "Manufacturer Part No."
+F 6 "C165948" H 22050 2625 50  0001 C CNN "LCSC Part No."
 	1    22050 2625
 	1    0    0    -1  
 $EndComp
@@ -15668,10 +15800,10 @@ F 3 "~" H 22850 1975 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R89
 U 1 1 5F892390
 P 22925 3025
-F 0 "R?" V 22850 3025 30  0000 C CNN
+F 0 "R89" V 22850 3025 30  0000 C CNN
 F 1 "1.5k" V 22925 3025 30  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 22855 3025 50  0001 C CNN
 F 3 "~" H 22925 3025 50  0001 C CNN
@@ -15685,4 +15817,239 @@ Wire Wire Line
 Wire Wire Line
 	22825 3025 22700 3025
 Connection ~ 22700 3025
+$Comp
+L Device:D DRST1
+U 1 1 610586AA
+P 32900 5800
+F 0 "DRST1" V 32850 5875 30  0000 L CNN
+F 1 "1N4148" V 32925 5875 30  0000 L CNN
+F 2 "acheron_Components:D_SOD-123" H 32900 5800 50  0001 C CNN
+F 3 "~" H 32900 5800 50  0001 C CNN
+	1    32900 5800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	32900 5650 32900 5600
+Wire Wire Line
+	32900 5600 32550 5600
+Connection ~ 32550 5600
+Wire Wire Line
+	32550 5600 32550 5625
+Text Notes 38325 7775 0    50   ~ 0
+Crystal load capacitors. See the calculations below for explanation:\nCe = 2*CL - Ci - Cs = 2*12pF - 4.7pF - 7.5pF = 11.8pF\nWhere Ce is the external load capacitance needed (12pF as per [6]),\nCL is the crystal total load capacitance [2];\nCi is the input capacitance of the XTAL pins [2];\nCs is the stray capacitance of one pin, estimated as 7.5pF [2]\nFor clarification please read the AN2519 [2] page 19\n(example layout of ATxmega32A4 devices)
+Text Notes 700  24350 0    50   ~ 10
+[6] YANGXING Tech YSX211SL crystal resonator datasheet
+Text Notes 700  24450 0    50   ~ 0
+https://datasheet.lcsc.com/szlcsc/1909111631_Yangxing-Tech-X201616MOD4SI_C108155.pdf
+Text Notes 800  22425 0    50   ~ 0
+The resistor and capacitors are expressly noted in the WS2811 datasheet [3].\nPlease note that each controller draws 3*18.5mA = 55.5mA at full brightness;\nhaving almost 100 LEDs at that state will require almost 5A of current.\nHence the LED power has to be capped not to draw too much current from \nthe USB connector, which supports a maximum of 900mA.
+$Comp
+L Device:L_Core_Ferrite I1
+U 1 1 639E18DC
+P 32850 4900
+F 0 "I1" V 33075 4900 50  0000 C CNN
+F 1 "1uH" V 32984 4900 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 32850 4900 50  0001 C CNN
+F 3 "~" H 32850 4900 50  0001 C CNN
+F 4 "0805" V 32850 4900 50  0001 C CNN "Package"
+F 5 "TDK" V 32850 4900 50  0001 C CNN "Manufacturer"
+F 6 "MLZ2012A1R0WT000" V 32850 4900 50  0001 C CNN "Manufacturer Part No."
+F 7 "C88171" V 32850 4900 50  0001 C CNN "LCSC Part No."
+	1    32850 4900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	33000 4900 33275 4900
+Text GLabel 32625 4900 0    50   Input ~ 0
+5V
+Wire Wire Line
+	32625 4900 32700 4900
+Text GLabel 33275 4900 2    50   Output ~ 0
+MCU_5V
+Text GLabel 34525 4400 1    40   Input ~ 0
+MCU_5V
+Text GLabel 35025 4425 1    40   Input ~ 0
+MCU_5V
+Text GLabel 36775 4400 1    40   Input ~ 0
+MCU_5V
+Text GLabel 37675 7375 2    40   Input ~ 0
+MCU_5V
+Text GLabel 33675 5375 0    40   Input ~ 0
+MCU_5V
+Text GLabel 35025 8300 3    40   Input ~ 0
+MCU_5V
+Text Notes 38325 7975 0    50   ~ 10
+Choke I1
+Text Notes 38325 8250 0    50   ~ 0
+I1 is a choke inductor meant for high-frequency\ncurrent noise filtering. It must have a ferrite core\nand be rated at leasr 100nH.
+Wire Wire Line
+	1575 8500 2325 8500
+Connection ~ 9825 8000
+Connection ~ 10350 8500
+Wire Wire Line
+	10350 8500 11350 8500
+Wire Wire Line
+	11350 8500 14350 8500
+Connection ~ 1800 8000
+Connection ~ 2325 8500
+Wire Wire Line
+	2325 8500 3325 8500
+Wire Wire Line
+	3325 8500 4325 8500
+Connection ~ 3800 8000
+Connection ~ 4325 8500
+Wire Wire Line
+	4325 8500 8325 8500
+$Comp
+L Device:D D84
+U 1 1 5ECEFC2C
+P 14350 8750
+F 0 "D84" V 14325 8675 30  0000 R CNN
+F 1 "1N4148" V 14375 8675 30  0000 R CNN
+F 2 "acheron_Components:D_SOD-123" H 14350 8750 50  0001 C CNN
+F 3 "~" H 14350 8750 50  0001 C CNN
+	1    14350 8750
+	0    1    1    0   
+$EndComp
+$Comp
+L acheronSymbols:MXSwitch SW84
+U 1 1 5ECEFC32
+P 14350 9250
+F 0 "SW84" H 14350 9325 30  0000 C CNN
+F 1 "MENU_R1" H 14350 9275 30  0000 C CNN
+F 2 "acheron_MX:MX125" H 14350 9250 50  0001 C CNN
+F 3 "" H 14350 9250 50  0001 C CNN
+	1    14350 9250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13825 9250 14000 9250
+Wire Wire Line
+	14350 8900 14450 8900
+Text GLabel 14450 8900 2    50   BiDi ~ 0
+L7
+Connection ~ 14350 8900
+Wire Wire Line
+	14350 8600 14350 8500
+Connection ~ 14350 8500
+Wire Wire Line
+	14350 8500 16350 8500
+Text GLabel 14450 9725 2    50   BiDi ~ 0
+L7
+Wire Wire Line
+	14350 9725 14450 9725
+Wire Wire Line
+	13825 10075 14000 10075
+$Comp
+L acheronSymbols:MXSwitch SW100
+U 1 1 5F8B2BE1
+P 14350 10075
+F 0 "SW100" H 14350 10150 30  0000 C CNN
+F 1 "MENU_R2" H 14350 10100 30  0000 C CNN
+F 2 "acheron_MX:MX100" H 14350 10075 50  0001 C CNN
+F 3 "" H 14350 10075 50  0001 C CNN
+	1    14350 10075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13825 9250 13825 10075
+Wire Wire Line
+	13825 9250 13825 8000
+Connection ~ 13825 9250
+Connection ~ 13825 8000
+Text GLabel 11450 9725 2    50   BiDi ~ 0
+L6
+Wire Wire Line
+	11350 9725 11450 9725
+Wire Wire Line
+	10825 10075 11000 10075
+$Comp
+L acheronSymbols:MXSwitch SW98
+U 1 1 627D4656
+P 11350 10075
+F 0 "SW98" H 11350 10150 30  0000 C CNN
+F 1 "RALT_B2" H 11350 10100 30  0000 C CNN
+F 2 "acheron_MX:MX150" H 11350 10075 50  0001 C CNN
+F 3 "" H 11350 10075 50  0001 C CNN
+	1    11350 10075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10825 9250 10825 10075
+Text GLabel 8425 9725 2    50   BiDi ~ 0
+L4
+Wire Wire Line
+	8325 9725 8425 9725
+Wire Wire Line
+	7800 10075 7975 10075
+$Comp
+L acheronSymbols:MXSwitch SW95
+U 1 1 62DC7F42
+P 8325 10075
+F 0 "SW95" H 8325 10150 30  0000 C CNN
+F 1 "SPACE_B2" H 8325 10100 30  0000 C CNN
+F 2 "acheron_MX:MX700R" H 8325 10075 50  0001 C CNN
+F 3 "" H 8325 10075 50  0001 C CNN
+	1    8325 10075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 9250 7800 10075
+Text GLabel 4425 9725 2    50   BiDi ~ 0
+L3
+Wire Wire Line
+	4325 9725 4425 9725
+Wire Wire Line
+	3800 10075 3975 10075
+$Comp
+L acheronSymbols:MXSwitch SW?
+U 1 1 633BB001
+P 4325 10075
+F 0 "SW?" H 4325 10150 30  0000 C CNN
+F 1 "LALT_B2" H 4325 10100 30  0000 C CNN
+F 2 "acheron_MX:MX150" H 4325 10075 50  0001 C CNN
+F 3 "" H 4325 10075 50  0001 C CNN
+	1    4325 10075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 9250 3800 10075
+Text GLabel 3425 9725 2    50   BiDi ~ 0
+L2
+Wire Wire Line
+	3325 9725 3425 9725
+Wire Wire Line
+	2800 10075 2975 10075
+$Comp
+L acheronSymbols:MXSwitch SW?
+U 1 1 639B3105
+P 3325 10075
+F 0 "SW?" H 3325 10150 30  0000 C CNN
+F 1 "LGUI_B2" H 3325 10100 30  0000 C CNN
+F 2 "acheron_MX:MX100" H 3325 10075 50  0001 C CNN
+F 3 "" H 3325 10075 50  0001 C CNN
+	1    3325 10075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 9250 2800 10075
+Text GLabel 2425 9725 2    50   BiDi ~ 0
+L1
+Wire Wire Line
+	2325 9725 2425 9725
+Wire Wire Line
+	1800 10075 1975 10075
+$Comp
+L acheronSymbols:MXSwitch SW?
+U 1 1 63FAAE67
+P 2325 10075
+F 0 "SW?" H 2325 10150 30  0000 C CNN
+F 1 "RCTRL_B2" H 2325 10100 30  0000 C CNN
+F 2 "acheron_MX:MX150" H 2325 10075 50  0001 C CNN
+F 3 "" H 2325 10075 50  0001 C CNN
+	1    2325 10075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 9250 1800 10075
 $EndSCHEMATC
